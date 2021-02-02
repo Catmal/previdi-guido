@@ -1,0 +1,29 @@
+[
+  {
+    "name": "prismic-preview",
+    "path": "/preview",
+    "component": "/home/mirco/Webapps/vivai-previdi/.nuxt-storybook/prismic/pages/preview.vue",
+    "_name": "_0b608db1"
+  },
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_67ae84c4"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_bc1f2988"
+  },
+  {
+    "name": "uid",
+    "path": "/:uid",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/_uid.vue",
+    "chunkName": "pages/_uid",
+    "_name": "_7954ca97"
+  }
+]

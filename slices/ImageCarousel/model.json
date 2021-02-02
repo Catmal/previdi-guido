@@ -1,0 +1,37 @@
+{
+  "id": "image_carousel",
+  "type": "SharedSlice",
+  "name": "ImageCarousel",
+  "description": "ImageCarousel",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ImageCarousel",
+      "primary": {
+        "content": {
+          "config": {
+            "label": "",
+            "placeholder": "This is the content",
+            "allowTargetBlank": true,
+            "multi": "preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "id": "image",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

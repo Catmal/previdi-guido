@@ -1,0 +1,39 @@
+{
+  "name": "vivai-previdi",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest",
+    "slicemachine": "start-slicemachine --port 9999",
+    "storybook": "nuxt storybook",
+    "build-storybook": "nuxt storybook build"
+  },
+  "dependencies": {
+    "@nuxtjs/prismic": "^1.2.4",
+    "@prismicio/vue": "^2.0.7",
+    "core-js": "^3.8.3",
+    "nuxt": "^2.14.12",
+    "nuxt-buefy": "^0.4.4",
+    "nuxt-sm": "0.0.6",
+    "prismic-javascript": "^3.0.2",
+    "vue-essential-slices": "^0.2.0",
+    "vue-slicezone": "0.0.29"
+  },
+  "devDependencies": {
+    "@nuxtjs/storybook": "^3.3.1",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@vue/test-utils": "^1.1.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "slice-machine-ui": "0.0.43",
+    "vue-jest": "^3.0.4"
+  }
+}

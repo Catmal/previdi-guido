@@ -1,0 +1,36 @@
+<template>
+  <di class="slider">
+    <b-carousel :indicator-inside="true">
+      <b-carousel-item
+        v-for="(item, i) in slice.items"
+        :key="i"
+        style="height: calc(100vh - 40px); width: 100%"
+      >
+        <span class="image">
+          <img :src="item.image.url" />
+        </span>
+      </b-carousel-item>
+    </b-carousel>
+  </di>
+</template>
+
+<script>
+export default {
+  props: {
+    slice: {
+      type: Object,
+      required: true,
+      default() {
+        return {}
+      },
+    },
+  },
+}
+</script>
+
+<style scoped>
+.slider {
+  position: relative;
+  top: -75px;
+}
+</style>
