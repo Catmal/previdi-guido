@@ -1,7 +1,6 @@
 <template>
-  <section class="section container my-6">
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
     <h1 class="mb-6 title">{{slice.primary.title}}</h1>
-
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.image.url" />
     </b-modal>
@@ -41,13 +40,6 @@ export default {
 </script>
 
 <style scoped>
-.section {
-  position: relative;
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
 a {
   color: #111;
 }

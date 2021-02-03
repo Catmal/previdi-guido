@@ -4,15 +4,19 @@
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
     <h1 class="title">{{slice.primary.Title}}</h1>
-    <div class="columns">
-      <div v-for="(item, i) in slice.items" :key="i" class="column is-clickable">
+    <div class="columns is-multiline">
+      <div
+        v-for="(item, i) in slice.items"
+        :key="i"
+        class="column column is-one-quarter is-clickable"
+      >
         <div style="position: relative">
           <img @click="currentImage = item, isImageModalActive = true" :src="item.coverImage.url" />
           <div
-            class="full-width p-4 has-background-primary-light"
+            class="full-width p-4 has-background-primary"
             style="position: absolute; bottom: 5px; left: 0; "
           >
-            <p class="has-text-dark">{{item.name}}</p>
+            <p class="has-text-white">{{item.name}}</p>
           </div>
         </div>
       </div>

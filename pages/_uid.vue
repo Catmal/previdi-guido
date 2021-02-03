@@ -1,10 +1,32 @@
 <template>
-  <div class="container">
-    <h1
-      class="my-6 is-size-1 has-text-weight-bold is-uppercase"
-    >{{ $prismic.asText(document.title) }}</h1>
-    <p class="mt-6">{{ $prismic.asText(document.content) }}</p>
-    <slice-zone type="page" :uid="$route.params.uid" />
+  <div>
+    <div style="position:relative;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+        <path
+          fill="#0e9246"
+          fill-opacity="1"
+          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+        />
+      </svg>
+
+      <div style="position:absolute; top:60px; left: 0; right: 0;">
+        <div class="container">
+          <h1
+            class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6"
+          >{{ $prismic.asText(document.title) }}</h1>
+          <div
+            v-if="document.content.length > 0 && document.content[0].text !== ''"
+            class="card p-6"
+            style="background: rgba(255,255,255,0.7)"
+          >
+            <div class="card-content">
+              <p>{{ $prismic.asText(document.content) }}</p>
+            </div>
+          </div>
+          <slice-zone type="page" :uid="$route.params.uid" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
