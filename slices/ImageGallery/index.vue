@@ -3,7 +3,7 @@
     <h1 class="mb-6 title">{{slice.primary.title}}</h1>
 
     <b-modal v-model="isImageModalActive">
-      <img v-if="currentImage" :src="currentImage.image.url" />
+      <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.image.url" />
     </b-modal>
     <div class="columns is-multiline">
       <div v-for="(item, i) in slice.items" :key="i" class="column is-one-quarter is-clickable">

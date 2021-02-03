@@ -22,7 +22,7 @@
         <b-navbar-item tag="router-link" :to="{ path: '/lavori' }">Lavori</b-navbar-item>
 
         <b-navbar-dropdown label="Servizi">
-          <b-navbar-item href="#">Aiuole</b-navbar-item>
+          <b-navbar-item tag="router-link" :to="{ path: '/services/aiuole' }">Aiuole</b-navbar-item>
           <b-navbar-item href="#">Contact</b-navbar-item>
         </b-navbar-dropdown>
         <b-navbar-item tag="router-link" :to="{ path: '/contatti' }">Contatti</b-navbar-item>

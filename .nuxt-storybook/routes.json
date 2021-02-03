@@ -13,6 +13,13 @@
     "_name": "_67ae84c4"
   },
   {
+    "name": "services-uid",
+    "path": "/services/:uid?",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/services/_uid.vue",
+    "chunkName": "pages/services/_uid",
+    "_name": "_2d10a70c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/index.vue",

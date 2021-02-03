@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h1 class="my-6 size-large">{{ $prismic.asText(document.title) }}</h1>
+    <h1
+      class="my-6 is-size-1 has-text-weight-bold is-uppercase"
+    >{{ $prismic.asText(document.title) }}</h1>
     <p class="mt-6">{{ $prismic.asText(document.content) }}</p>
     <slice-zone type="page" :uid="$route.params.uid" />
   </div>
@@ -13,6 +15,7 @@ export default {
     components: {
         SliceZone
     },
+      transition: 'home',
     async asyncData({ $prismic, params, error }) {
     try{
       // Query to get post content
@@ -34,3 +37,14 @@ export default {
   },
 }
 </script>
+
+<style>
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
+}
+</style>

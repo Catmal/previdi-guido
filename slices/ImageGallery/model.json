@@ -31,13 +31,18 @@
       },
       "items": {
         "image": {
-          "type": "Image",
           "config": {
-            "id": "image",
             "label": "",
             "constraint": {},
-            "thumbnails": []
-          }
+            "thumbnails": [
+              {
+                "name": "thumb",
+                "width": 300,
+                "height": null
+              }
+            ]
+          },
+          "type": "Image"
         }
       }
     }

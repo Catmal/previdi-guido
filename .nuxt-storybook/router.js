@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _0b608db1 = () => interopDefault(import('./prismic/pages/preview.vue' /* webpackChunkName: "" */))
 const _67ae84c4 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
+const _2d10a70c = () => interopDefault(import('../pages/services/_uid.vue' /* webpackChunkName: "pages/services/_uid" */))
 const _bc1f2988 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _7954ca97 = () => interopDefault(import('../pages/_uid.vue' /* webpackChunkName: "pages/_uid" */))
 
@@ -33,6 +34,10 @@ export const routerOptions = {
     path: "/inspire",
     component: _67ae84c4,
     name: "inspire"
+  }, {
+    path: "/services/:uid?",
+    component: _2d10a70c,
+    name: "services-uid"
   }, {
     path: "/",
     component: _bc1f2988,
