@@ -1,5 +1,5 @@
 <template>
-  <di class="slider">
+  <div class="slider">
     <b-carousel :indicator-inside="true">
       <b-carousel-item
         v-for="(item, i) in slice.items"
@@ -11,7 +11,7 @@
         </span>
       </b-carousel-item>
     </b-carousel>
-  </di>
+  </div>
 </template>
 
 <script>

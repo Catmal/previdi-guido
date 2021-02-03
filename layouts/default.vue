@@ -19,6 +19,8 @@
       <template slot="end">
         <b-navbar-item tag="router-link" :to="{ path: '/azienda' }" class="is-primary">Azienda</b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/piante' }">Piante</b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: '/lavori' }">Lavori</b-navbar-item>
+
         <b-navbar-dropdown label="Servizi">
           <b-navbar-item href="#">Aiuole</b-navbar-item>
           <b-navbar-item href="#">Contact</b-navbar-item>
