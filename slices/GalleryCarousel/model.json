@@ -1,0 +1,53 @@
+{
+  "id": "gallery_carousel",
+  "type": "SharedSlice",
+  "name": "GalleryCarousel",
+  "description": "GalleryCarousel",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "GalleryCarousel",
+      "primary": {
+        "Title": {
+          "type": "Text",
+          "config": {
+            "label": "",
+            "id": "Title",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "coverImage": {
+          "type": "Image",
+          "config": {
+            "id": "coverImage",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "additionalImage": {
+          "type": "Image",
+          "config": {
+            "id": "additionalImage",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "",
+            "id": "name",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

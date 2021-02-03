@@ -5,17 +5,13 @@
     <b-modal v-model="isImageModalActive">
       <img v-if="currentImage" :src="currentImage.image.url" />
     </b-modal>
-    <div class="columns">
-      <div v-for="(item, i) in slice.items" :key="i" class="column has-cursor-pointer">
-        <img
-          class="has-pointer-cursor"
-          @click="currentImage = item, isImageModalActive = true"
-          :src="item.image.url"
-        />
+    <div class="columns is-multiline">
+      <div v-for="(item, i) in slice.items" :key="i" class="column is-one-quarter is-clickable">
+        <img @click="currentImage = item, isImageModalActive = true" :src="item.image.url" />
       </div>
     </div>
     <b-button
-      v-if="slice.primary.link"
+      v-if="slice.primary.link.url"
       tag="nuxt-link"
       :to="slice.primary.link.url"
       type="is-primary"
