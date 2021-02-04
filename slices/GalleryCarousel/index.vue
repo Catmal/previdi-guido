@@ -1,9 +1,9 @@
 <template>
-  <section>
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
-    <h1 class="title">{{slice.primary.Title}}</h1>
+    <h1 class="title has-text-primary">{{slice.primary.Title}}</h1>
     <div class="columns is-multiline">
       <div
         v-for="(item, i) in slice.items"

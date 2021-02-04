@@ -32,10 +32,6 @@ export default {
 </script>
 
 <style scoped>
-.hero {
-   {
-  }
-}
 .section {
   position: relative;
   background: #f7f7f7;
@@ -45,8 +41,5 @@ export default {
 }
 a {
   color: #111;
-}
-.title {
-  margin-bottom: 2em;
 }
 </style>

@@ -9,11 +9,12 @@
         />
       </svg>
 
-      <div style="position:absolute; top:60px; left: 0; right: 0;">
+      <div style=" margin-top:-15%;">
         <div class="container">
           <h1
             class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6"
           >{{ $prismic.asText(document.title) }}</h1>
+
           <div
             v-if="document.content.length > 0 && document.content[0].text !== ''"
             class="card p-6"

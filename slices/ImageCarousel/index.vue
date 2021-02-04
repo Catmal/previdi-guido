@@ -32,6 +32,6 @@ export default {
 <style scoped>
 .slider {
   position: relative;
-  top: -75px;
+  top: -80px;
 }
 </style>
