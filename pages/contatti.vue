@@ -1,7 +1,11 @@
 <template>
   <div>
     <div style="position:relative;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+      <svg
+        style="position: sticky; top: 70px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 200"
+      >
         <path
           fill="#0e9246"
           fill-opacity="1"
@@ -9,17 +13,18 @@
         />
       </svg>
     </div>
-    <div style=" margin-top:-290px;">
+    <div style=" margin-top:-28%; padding: 15px">
       <div class="container">
         <h1 class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6">CONTATTI</h1>
 
-        <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
-          <div class="columns">
-            <div class="column">
+        <div class="columns">
+          <div class="column">
+            <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
+              <h1 class="mb-6">Come possiamo aiutarti?</h1>
               <form name="contact" netlify>
                 <b-field>
                   <b-input
-                    placeholder="Name"
+                    placeholder="Nome"
                     v-model="email"
                     type="text"
                     icon="email"
@@ -39,15 +44,52 @@
                     name="email"
                   ></b-input>
                 </b-field>
-                <button type="submit">Send</button>
+                <b-field>
+                  <b-input
+                    placeholder="Messaggio"
+                    v-model="email"
+                    type="textarea"
+                    icon-right="close-circle"
+                    icon-right-clickable
+                    name="email"
+                  ></b-input>
+                </b-field>
+                <button class="has-background-primary p-4 has-text-white" type="submit">Send</button>
               </form>
-            </div>
-            <div class="column">
-              <h1>TELEFONO</h1>
-            </div>
+            </section>
           </div>
-        </section>
+          <div class="column">
+            <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
+              <h1>TELEFONO</h1>
+              <h2>
+                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>UFFICIO - 0535.97277
+              </h2>
+              <h2>
+                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>GUIDO - 0535.97277
+              </h2>
+              <h2>
+                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>MATTEO - 0535.97277
+              </h2>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+export default {
+    transition: 'home',
+
+}
+</script>
+<style>
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
+}
+</style>

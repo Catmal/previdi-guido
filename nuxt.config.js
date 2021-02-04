@@ -45,7 +45,8 @@ export default {
         "routes": [{
           "type": "page",
           "path": "/:uid"
-        }]
+        },
+        ]
       }
     }], ["nuxt-sm"]],
   // Build Configuration: https://go.nuxtjs.dev/config-build

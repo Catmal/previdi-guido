@@ -2,35 +2,36 @@
   {
     "name": "prismic-preview",
     "path": "/preview",
-    "component": "/home/mirco/Webapps/vivai-previdi/.nuxt-storybook/prismic/pages/preview.vue",
-    "_name": "_0b608db1"
+    "component": "/home/mirco/Webapps/vivai-previdi/.nuxt-storybook/prismic/pages/preview.vue"
+  },
+  {
+    "name": "contatti",
+    "path": "/contatti",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/contatti.vue",
+    "chunkName": "pages/contatti"
   },
   {
     "name": "inspire",
     "path": "/inspire",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_67ae84c4"
+    "chunkName": "pages/inspire"
   },
   {
-    "name": "services-uid",
-    "path": "/services/:uid?",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/services/_uid.vue",
-    "chunkName": "pages/services/_uid",
-    "_name": "_2d10a70c"
+    "name": "servizi-uid",
+    "path": "/servizi/:uid?",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/servizi/_uid.vue",
+    "chunkName": "pages/servizi/_uid"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_bc1f2988"
+    "chunkName": "pages/index"
   },
   {
     "name": "uid",
     "path": "/:uid",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/_uid.vue",
-    "chunkName": "pages/_uid",
-    "_name": "_7954ca97"
+    "chunkName": "pages/_uid"
   }
 ]

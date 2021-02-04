@@ -21,7 +21,7 @@
           <b-skeleton size="is-large" :active="document.title === ''" :count="2"></b-skeleton>
 
           <div
-            v-if="document.content.length > 0 && document.content[0].text !== ''"
+            v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
             class="card p-6"
             style="background: rgba(255,255,255,0.7)"
           >
@@ -30,7 +30,7 @@
               <b-skeleton size="is-large" :active="!document.content" :count="2"></b-skeleton>
             </div>
           </div>
-          <slice-zone type="page" :uid="$route.params.uid" />
+          <slice-zone type="service" :uid="$route.params.uid" />
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
     async asyncData({ $prismic, params, error }) {
     try{
       // Query to get post content
-      const page = (await $prismic.api.getByUID('page', params.uid)).data
+      const page = (await $prismic.api.getByUID('service', params.uid)).data
       const services = await $prismic.api.query(
         $prismic.predicates.at("document.type", "service"),
         { orderings : '[my.service.date desc]' }
@@ -57,7 +57,7 @@ export default {
       // Returns data to be used in template
       return {
         document: page,
-                services: services.results,
+        services: services.results,
       }
     } catch (e) {
       // Returns error page

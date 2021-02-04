@@ -36,9 +36,13 @@
             <b-navbar-item
               class="has-text-primary"
               tag="router-link"
-              :to="{ path: '/services/aiuole' }"
+              :to="{ path: '/servizi/aiuole' }"
             >Aiuole</b-navbar-item>
-            <b-navbar-item href="#">Contact</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/prati' }"
+            >Prati</b-navbar-item>
           </b-navbar-dropdown>
           <b-navbar-item
             class="has-text-primary"

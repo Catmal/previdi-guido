@@ -1,17 +1,26 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.8)">
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.9)">
     <h1
       v-if="slice.primary.title"
-      class="mb-6 title has-text-primary has-text-centered"
+      class="mb-6 has-text-primary has-text-centered"
     >{{slice.primary.title}}</h1>
+    <p
+      v-if="slice.primary.content[0]"
+      class="mb-6 has-text-centered has-text-black"
+    >{{slice.primary.content[0].text}}</p>
 
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.image.url" />
     </b-modal>
 
-    <div class="columns is-multiline">
+    <div v-if="slice.items" class="columns is-multiline">
       <div v-for="(item, i) in slice.items" :key="i" class="column is-one-quarter is-clickable">
-        <img @click="currentImage = item, isImageModalActive = true" :src="item.image.url" />
+        <img
+          v-if="item.image.url"
+          @click="currentImage = item, isImageModalActive = true"
+          :src="item.image.url"
+        />
+        <b-skeleton :active="!item.image.url" circle width="64px" height="64px"></b-skeleton>
       </div>
     </div>
     <b-button
