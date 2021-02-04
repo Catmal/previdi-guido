@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div style="position:relative;">
-      <svg
-        style="position: sticky; top: 94px"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 200"
-      >
+    <div class="cont">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200">
         <path
           fill="#0e9246"
           fill-opacity="1"
@@ -69,5 +65,23 @@ export default {
 .home-enter,
 .home-leave-active {
   opacity: 0;
+}
+
+svg {
+  display: inline-block;
+  position: sticky;
+  top: 0;
+}
+@media only screen and (max-width: 600px) {
+  svg {
+    top: 0;
+  }
+}
+.cont {
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  position: relative;
 }
 </style>

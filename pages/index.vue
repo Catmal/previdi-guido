@@ -1,5 +1,22 @@
 <template>
   <section class="hero">
+    <h1 class="has-text-primary">SERVIZI</h1>
+    <slice-zone type="home_page" queryType="single" />
+    <section class="container my-6" style="background: rgba(255,255,255,0.95)">
+      <div class="columns is-multiline">
+        <div class="column is-one-quarter" v-for="service in services" :key="service.id">
+          <div style="position: relative">
+            <img class="rounded-borders" :src="service.data.home_image.url" />
+            <div
+              class="p-4 rounded-borders"
+              style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
+            >
+              <p class="has-text-black">{{service.data.title[0].text}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <slice-zone type="page" uid="home" />
   </section>
 </template>
