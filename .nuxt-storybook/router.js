@@ -6,7 +6,6 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _0b608db1 = () => interopDefault(import('./prismic/pages/preview.vue' /* webpackChunkName: "" */))
 const _700c38c0 = () => interopDefault(import('../pages/contatti.vue' /* webpackChunkName: "pages/contatti" */))
-const _67ae84c4 = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _39abb2f8 = () => interopDefault(import('../pages/servizi/_uid.vue' /* webpackChunkName: "pages/servizi/_uid" */))
 const _bc1f2988 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 const _7954ca97 = () => interopDefault(import('../pages/_uid.vue' /* webpackChunkName: "pages/_uid" */))
@@ -35,10 +34,6 @@ export const routerOptions = {
     path: "/contatti",
     component: _700c38c0,
     name: "contatti"
-  }, {
-    path: "/inspire",
-    component: _67ae84c4,
-    name: "inspire"
   }, {
     path: "/servizi/:uid?",
     component: _39abb2f8,
