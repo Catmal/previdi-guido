@@ -8,45 +8,46 @@
         </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ path: '/' }">
           <b-icon icon="email" size="is-medium" class="mr-2"></b-icon>
-          <h2>0535.97277</h2>
+          <h2>info@previdiguido.it</h2>
         </b-navbar-item>
       </template>
     </b-navbar>
-    <b-navbar
-      hoverable
-      class="sticky"
-      style="height: 80px; background-color: rgba(255,255,255,0.8)"
-    >
-      <template slot="brand">
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
-          <img
-            style="max-height: 50px;"
-            src="/logo.png"
-            alt="Lightweight UI components for Vue.js based on Bulma"
-          />
-        </b-navbar-item>
-      </template>
-      <template slot="end">
-        <b-navbar-item class="has-text-primary" tag="router-link" :to="{ path: '/azienda' }">Azienda</b-navbar-item>
-        <b-navbar-item class="has-text-primary" tag="router-link" :to="{ path: '/piante' }">Piante</b-navbar-item>
-        <b-navbar-item class="has-text-primary" tag="router-link" :to="{ path: '/lavori' }">Lavori</b-navbar-item>
-
-        <b-navbar-dropdown class="has-text-primary" label="Servizi">
+    <div class="sticky" style="height: 68px; background-color: rgba(255,255,255,0.8); z-index: 12">
+      <b-navbar style="background-color: rgba(255,255,255,0)" class="container" hoverable>
+        <template slot="brand">
+          <b-navbar-item tag="router-link" :to="{ path: '/' }">
+            <img
+              style="max-height: 50px;"
+              src="/logo.png"
+              alt="Lightweight UI components for Vue.js based on Bulma"
+            />
+          </b-navbar-item>
+        </template>
+        <template slot="end">
           <b-navbar-item
             class="has-text-primary"
             tag="router-link"
-            :to="{ path: '/services/aiuole' }"
-          >Aiuole</b-navbar-item>
-          <b-navbar-item href="#">Contact</b-navbar-item>
-        </b-navbar-dropdown>
-        <b-navbar-item
-          class="has-text-primary"
-          tag="router-link"
-          :to="{ path: '/contatti' }"
-        >Contatti</b-navbar-item>
-      </template>
-    </b-navbar>
+            :to="{ path: '/azienda' }"
+          >Azienda</b-navbar-item>
+          <b-navbar-item class="has-text-primary" tag="router-link" :to="{ path: '/piante' }">Piante</b-navbar-item>
+          <b-navbar-item class="has-text-primary" tag="router-link" :to="{ path: '/lavori' }">Lavori</b-navbar-item>
 
+          <b-navbar-dropdown class="has-text-primary" label="Servizi">
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/services/aiuole' }"
+            >Aiuole</b-navbar-item>
+            <b-navbar-item href="#">Contact</b-navbar-item>
+          </b-navbar-dropdown>
+          <b-navbar-item
+            class="has-text-primary"
+            tag="router-link"
+            :to="{ path: '/contatti' }"
+          >Contatti</b-navbar-item>
+        </template>
+      </b-navbar>
+    </div>
     <section>
       <nuxt />
       <footer

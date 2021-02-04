@@ -1,5 +1,5 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.7)">
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
@@ -11,12 +11,16 @@
         class="column column is-one-quarter is-clickable"
       >
         <div style="position: relative">
-          <img @click="currentImage = item, isImageModalActive = true" :src="item.coverImage.url" />
+          <img
+            class="rounded-borders"
+            @click="currentImage = item, isImageModalActive = true"
+            :src="item.coverImage.url"
+          />
           <div
-            class="full-width p-4 has-background-primary"
-            style="position: absolute; bottom: 5px; left: 0; "
+            class="p-4 rounded-borders"
+            style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.8)"
           >
-            <p class="has-text-white">{{item.name}}</p>
+            <p class="has-text-black">{{item.name}}</p>
           </div>
         </div>
       </div>
@@ -57,5 +61,8 @@ a {
 }
 .title {
   margin-bottom: 2em;
+}
+.rounded-borders {
+  border-radius: 4px;
 }
 </style>

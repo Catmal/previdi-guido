@@ -1,7 +1,11 @@
 <template>
   <div>
     <div style="position:relative;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260">
+      <svg
+        style="position: sticky; top: 70px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 200"
+      >
         <path
           fill="#0e9246"
           fill-opacity="1"
@@ -9,7 +13,7 @@
         />
       </svg>
 
-      <div style=" margin-top:-15%;">
+      <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
           <h1
             class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6"
