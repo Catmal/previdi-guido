@@ -1,5 +1,5 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.7)">
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.95)">
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
@@ -18,7 +18,7 @@
           />
           <div
             class="p-4 rounded-borders"
-            style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.8)"
+            style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
             <p class="has-text-black">{{item.name}}</p>
           </div>
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss"  scoped>
 .section {
   position: relative;
   background: #f7f7f7;

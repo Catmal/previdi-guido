@@ -29,9 +29,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss"  scoped>
 .slider {
   position: relative;
-  top: -80px;
+  top: -94px;
 }
 </style>

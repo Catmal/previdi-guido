@@ -1,18 +1,27 @@
 <template>
   <div>
-    <b-navbar centered type="is-primary">
-      <template slot="start">
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
-          <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>
-          <h2>0535.97277</h2>
-        </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/' }">
-          <b-icon icon="email" size="is-medium" class="mr-2"></b-icon>
-          <h2>info@previdiguido.it</h2>
-        </b-navbar-item>
-      </template>
-    </b-navbar>
-    <div class="sticky" style="height: 68px; background-color: rgba(255,255,255,0.8); z-index: 12">
+    <nav style="height: 40px" class="level has-background-primary has-text-white p-2">
+      <div class="level-item">
+        <div>
+          <p class>0535.97277</p>
+        </div>
+      </div>
+
+      <div class="level-item">
+        <div>
+          <p class>info@previdiguido.it</p>
+        </div>
+      </div>
+      <div class="level-item">
+        <div>
+          <p class>Facebook</p>
+        </div>
+      </div>
+    </nav>
+    <div
+      class="sticky pt-4"
+      style="height: 94px; background-color: rgba(255,255,255,0.8); z-index: 12;"
+    >
       <b-navbar style="background-color: rgba(255,255,255,0)" class="container" hoverable>
         <template slot="brand">
           <b-navbar-item tag="router-link" :to="{ path: '/' }">
@@ -41,8 +50,38 @@
             <b-navbar-item
               class="has-text-primary"
               tag="router-link"
+              :to="{ path: '/servizi/parchi-e-giardini' }"
+            >Parchi e Giardini</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
               :to="{ path: '/servizi/prati' }"
             >Prati</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/impianti-irrigazione' }"
+            >Impianti Irrigazione</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/trattamenti-fitosanitari' }"
+            >Trattamenti Fitosanitari</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/endoterapia' }"
+            >Endoterapia</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/potatura-aerea' }"
+            >Potatura Aerea</b-navbar-item>
+            <b-navbar-item
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/allestimenti-eventi' }"
+            >Allestimenti Eventi</b-navbar-item>
           </b-navbar-dropdown>
           <b-navbar-item
             class="has-text-primary"
@@ -80,5 +119,13 @@ export default {
 .sticky {
   position: sticky;
   top: 0;
+}
+
+.level:not(:last-child) {
+  margin-bottom: 0;
+}
+
+html {
+  font-family: "Poppins";
 }
 </style>

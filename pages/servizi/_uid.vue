@@ -2,7 +2,7 @@
   <div>
     <div style="position:relative;">
       <svg
-        style="position: sticky; top: 70px"
+        style="position: sticky; top: 100px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 200"
       >
@@ -23,7 +23,7 @@
           <div
             v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
             class="card p-6"
-            style="background: rgba(255,255,255,0.7)"
+            style="background: rgba(255,255,255,1)"
           >
             <div class="card-content">
               <p>{{ $prismic.asText(document.content) }}</p>
@@ -67,7 +67,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss"  scoped>
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;

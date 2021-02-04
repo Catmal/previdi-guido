@@ -19,7 +19,7 @@
 
         <div class="columns">
           <div class="column">
-            <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
+            <section class="card section container my-6" style="background: rgba(255,255,255,0.9">
               <h1 class="mb-6">Come possiamo aiutarti?</h1>
               <form name="contact" netlify>
                 <b-field>
@@ -59,16 +59,16 @@
             </section>
           </div>
           <div class="column">
-            <section class="card section container my-6" style="background: rgba(255,255,255,0.7">
+            <section class="card section container my-6" style="background: rgba(255,255,255,0.9">
               <h1>TELEFONO</h1>
               <h2>
-                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>UFFICIO - 0535.97277
+                <b-icon icon="phone" size="is-medium" class="mr-2 mt-4"></b-icon>UFFICIO - 0535.97277
               </h2>
               <h2>
-                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>GUIDO - 0535.97277
+                <b-icon icon="phone" size="is-medium" class="mr-2 mt-4"></b-icon>GUIDO - 0535.97277
               </h2>
               <h2>
-                <b-icon icon="phone" size="is-medium" class="mr-2"></b-icon>MATTEO - 0535.97277
+                <b-icon icon="phone" size="is-medium" class="mr-2 mt-4"></b-icon>MATTEO - 0535.97277
               </h2>
             </section>
           </div>
@@ -83,7 +83,7 @@ export default {
 
 }
 </script>
-<style>
+<style lang="scss"  scoped>
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;

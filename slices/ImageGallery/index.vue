@@ -1,5 +1,5 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.9)">
+  <section class="card section container my-6" style="background: rgba(255,255,255,0.95)">
     <h1
       v-if="slice.primary.title"
       class="mb-6 has-text-primary has-text-centered"
@@ -18,9 +18,8 @@
         <img
           v-if="item.image.url"
           @click="currentImage = item, isImageModalActive = true"
-          :src="item.image.url"
+          :src="item.image.thumb.url"
         />
-        <b-skeleton :active="!item.image.url" circle width="64px" height="64px"></b-skeleton>
       </div>
     </div>
     <b-button
@@ -53,7 +52,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss"  scoped>
 a {
   color: #111;
 }

@@ -2,7 +2,7 @@
   <div>
     <div style="position:relative;">
       <svg
-        style="position: sticky; top: 70px"
+        style="position: sticky; top: 94px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 200"
       >
@@ -23,7 +23,7 @@
           <div
             v-if="document.content.length > 0 && document.content[0].text !== ''"
             class="card p-6"
-            style="background: rgba(255,255,255,0.7)"
+            style="background: rgba(255,255,255,0.9)"
           >
             <div class="card-content">
               <p>{{ $prismic.asText(document.content) }}</p>
@@ -49,15 +49,9 @@ export default {
     try{
       // Query to get post content
       const page = (await $prismic.api.getByUID('page', params.uid)).data
-      const services = await $prismic.api.query(
-        $prismic.predicates.at("document.type", "service"),
-        { orderings : '[my.service.date desc]' }
-      )
-
       // Returns data to be used in template
       return {
         document: page,
-                services: services.results,
       }
     } catch (e) {
       // Returns error page
@@ -67,7 +61,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss"  scoped>
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;

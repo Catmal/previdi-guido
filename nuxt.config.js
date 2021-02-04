@@ -21,7 +21,8 @@ export default {
       rel: 'icon',
       type: 'image/x-icon',
       href: '/favicon.ico'
-    }],
+    },
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap", },],
     script: [{
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {
@@ -51,7 +52,7 @@ export default {
     }], ["nuxt-sm"]],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   styleResources: {
-    scss: ['./assets/scss/*.scss']
+    scss: ['assets/scss/*.scss', 'assets/*.scss']
   },
   build: {
     transpile: ["vue-slicezone", "nuxt-sm"]
