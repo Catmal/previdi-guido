@@ -15,7 +15,7 @@
     </div>
     <div style=" margin-top:-28%; padding: 15px">
       <div class="container">
-        <h1 class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6">CONTATTI</h1>
+        <h1 class="is-size-1 has-text-weight-bold is-uppercase has-text-white">CONTATTI</h1>
 
         <div class="columns">
           <div class="column">
@@ -25,7 +25,6 @@
                 <b-field>
                   <b-input
                     placeholder="Nome"
-                    v-model="email"
                     type="text"
                     icon="email"
                     icon-right="close-circle"
@@ -36,7 +35,6 @@
                 <b-field>
                   <b-input
                     placeholder="Email"
-                    v-model="email"
                     type="email"
                     icon="email"
                     icon-right="close-circle"
@@ -47,7 +45,6 @@
                 <b-field>
                   <b-input
                     placeholder="Messaggio"
-                    v-model="email"
                     type="textarea"
                     icon-right="close-circle"
                     icon-right-clickable

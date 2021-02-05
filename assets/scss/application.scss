@@ -10,16 +10,7 @@ $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 $secondary: findLightColor($primary);
 
-h1 {
-    font-size: 36px!important;
-    color: $primary;
-    font-family: 'Poppins';
-}
 
-a {
-    color: none;
-    text-decoration: none;
-}
 
 
 

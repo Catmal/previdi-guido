@@ -12,9 +12,8 @@
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
           <h1
-            class="is-size-1 has-text-weight-bold is-uppercase has-text-white mb-6"
+            class="is-size-1 has-text-weight-light is-uppercase has-text-white"
           >{{ $prismic.asText(document.title) }}</h1>
-          <b-skeleton size="is-large" :active="document.title === ''" :count="2"></b-skeleton>
 
           <div
             v-if="document.content.length > 0 && document.content[0].text !== ''"
@@ -23,7 +22,6 @@
           >
             <div class="card-content">
               <p>{{ $prismic.asText(document.content) }}</p>
-              <b-skeleton size="is-large" :active="!document.content" :count="2"></b-skeleton>
             </div>
           </div>
           <slice-zone type="page" :uid="$route.params.uid" />

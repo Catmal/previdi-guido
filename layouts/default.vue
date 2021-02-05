@@ -51,7 +51,12 @@
             :to="{ path: '/lavori' }"
           >Lavori</b-navbar-item>
 
-          <b-navbar-dropdown class="drop" label="Servizi">
+          <b-navbar-dropdown
+            active-class="is-active"
+            style="color: #000!important"
+            class="drop"
+            label="Servizi"
+          >
             <b-navbar-item
               class="has-text-primary has-text-weight-light"
               tag="router-link"
@@ -129,7 +134,20 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+h1 {
+  font-size: 34px !important;
+}
+
+p {
+  font-size: 18px;
+}
+
+a,
+a.navbar-link {
+  text-decoration: none;
+  color: $primary;
+}
 .sticky {
   position: sticky;
   top: 0;
