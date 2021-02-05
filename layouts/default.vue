@@ -58,26 +58,31 @@
             label="Servizi"
           >
             <b-navbar-item
+              active-class="is-active"
               class="has-text-primary has-text-weight-light"
               tag="router-link"
               :to="{ path: '/servizi/aiuole' }"
             >Aiuole</b-navbar-item>
             <b-navbar-item
+              active-class="is-active"
               class="has-text-primary has-text-weight-light"
               tag="router-link"
               :to="{ path: '/servizi/parchi-e-giardini' }"
             >Parchi e Giardini</b-navbar-item>
             <b-navbar-item
+              active-class="is-active"
               class="has-text-primary has-text-weight-light"
               tag="router-link"
               :to="{ path: '/servizi/prati' }"
             >Prati</b-navbar-item>
             <b-navbar-item
+              active-class="is-active"
               class="has-text-primary has-text-weight-light"
               tag="router-link"
               :to="{ path: '/servizi/impianti-irrigazione' }"
             >Impianti Irrigazione</b-navbar-item>
             <b-navbar-item
+              active-class="is-active"
               class="has-text-primary has-text-weight-light"
               tag="router-link"
               :to="{ path: '/servizi/trattamenti-fitosanitari' }"

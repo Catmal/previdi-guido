@@ -1,5 +1,5 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.95)">
+  <section class="card section container mt-4 mb-6" style="background: rgba(255,255,255,0.95)">
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>

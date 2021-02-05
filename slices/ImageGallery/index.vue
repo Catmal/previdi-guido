@@ -1,5 +1,5 @@
 <template>
-  <section class="card section container my-6" style="background: rgba(255,255,255,0.95)">
+  <section class="card section container mt-4 mb-6" style="background: rgba(255,255,255,0.95)">
     <h1
       v-if="slice.primary.title"
       class="mb-6 has-text-primary has-text-centered"

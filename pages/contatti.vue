@@ -15,11 +15,14 @@
     </div>
     <div style=" margin-top:-28%; padding: 15px">
       <div class="container">
-        <h1 class="is-size-1 has-text-weight-bold is-uppercase has-text-white">CONTATTI</h1>
+        <h1 class="is-size-1 has-text-weight-light is-uppercase has-text-white">CONTATTI</h1>
 
         <div class="columns">
           <div class="column">
-            <section class="card section container my-6" style="background: rgba(255,255,255,0.9">
+            <section
+              class="card section container mt-4 mb-6"
+              style="background: rgba(255,255,255,0.9"
+            >
               <h1 class="mb-6">Come possiamo aiutarti?</h1>
               <form name="contact" netlify>
                 <b-field>

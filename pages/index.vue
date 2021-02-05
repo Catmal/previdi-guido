@@ -1,13 +1,23 @@
 <template>
   <section class="hero">
     <slice-zone type="home_page" queryType="single" />
-    <div class="has-background-primary">
+    <div class="has-background-primary pb-6">
       <section class="container">
-        <h1 class="has-text-white">SERVIZI</h1>
-        <div class="columns is-multiline">
-          <div class="column is-one-quarter" v-for="service in services" :key="service.id">
+        <h1
+          class="is-size-1 has-text-white has-text-centered title my-6 has-text-weight-light"
+        >SERVIZI</h1>
+        <div class="columns is-2 is-multiline">
+          <div
+            class="column transparent is-one-third"
+            v-for="service in services"
+            :key="service.id"
+          >
             <div style="position: relative">
-              <img class="rounded-borders" :src="service.data.home_image.url" />
+              <img
+                v-if="service.data.home_image.home_thumb"
+                class="rounded-borders"
+                :src="service.data.home_image.home_thumb.url"
+              />
               <div
                 class="p-4 rounded-borders"
                 style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
@@ -50,3 +60,9 @@ export default {
   },
 }
 </script>
+<style scoped>
+.rounded-borders {
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+</style>
