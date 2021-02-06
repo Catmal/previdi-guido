@@ -41,7 +41,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
     '@nuxtjs/style-resources',
-    'nuxt-buefy', "nuxt-purgecss", ["@nuxtjs/prismic", {
+    'nuxt-buefy', ["@nuxtjs/prismic", {
       "endpoint": "https://vivai-previdi.cdn.prismic.io/api/v2",
       "apiOptions": {
         "routes": [{
