@@ -1,0 +1,59 @@
+body {
+  font-family: "Poppins";
+} 
+
+h1 {
+  font-family: "Poppins";
+  font-size: 3.5rem!important;
+  color: #fff;
+  font-weight: 300!important;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3rem!important;
+  font-weight: 300!important;
+
+}
+
+h3 {
+  font-size: 2rem!important;
+  font-weight: 400;
+  color: #0e9246;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+
+}
+
+p {
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+a,
+.navbar-link {
+  text-decoration: none;
+  color: #0e9246;
+  font-weight: 400;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.drop {
+  font-weight: 300 !important;
+}
+
+.is-active {
+  font-weight: 600 !important;
+  font-size: 22px;
+}
+
+.rounded-borders {
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
