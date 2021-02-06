@@ -22,7 +22,7 @@ export default {
       type: 'image/x-icon',
       href: '/favicon.png'
     },
-    { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Poppins&display=swap", },],
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700", },],
     script: [{
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {
@@ -30,7 +30,8 @@ export default {
     }]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["vue-essential-slices/src/styles/styles.scss", '~assets/scss/application.scss'],
+  css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss'],
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +41,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
     '@nuxtjs/style-resources',
-    'nuxt-buefy', ["@nuxtjs/prismic", {
+    'nuxt-buefy', "nuxt-purgecss", ["@nuxtjs/prismic", {
       "endpoint": "https://vivai-previdi.cdn.prismic.io/api/v2",
       "apiOptions": {
         "routes": [{
@@ -52,13 +53,22 @@ export default {
     }], ["nuxt-sm"]],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   styleResources: {
-    scss: ['assets/scss/*.scss', 'assets/*.scss']
+    scss: [
+      '~/assets/scss/main.scss',
+    ]
   },
   build: {
-    transpile: ["vue-slicezone", "nuxt-sm"]
+    standalone: true,
+    transpile: ["vue-slicezone", "nuxt-sm"],
+    extractCSS: true
   },
   storybook: {
     stories: ["~/slices/**/*.stories.js", "~/slices/**/*.stories.js"]
+  },
+  watchers: {
+    webpack: {
+      ignored: /node_modules/
+    }
   },
   ignore: ["**/*.stories.js", "**/*.stories.js"]
 };

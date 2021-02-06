@@ -5,7 +5,7 @@
   >
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="mb-6 is-primary title">{{slice.primary.title}}</h1>
+        <h2 class="mb-6">{{slice.primary.title}}</h2>
         <b-button
           v-if="slice.primary.link"
           tag="nuxt-link"
@@ -31,15 +31,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.section {
-  position: relative;
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
-a {
-  color: #111;
-}
-</style>

@@ -1,22 +1,34 @@
 <template>
   <section class="card section container mt-4 mb-6" style="background: rgba(255,255,255,0.95)">
-    <h1
+    <h2
       v-if="slice.primary.title"
       class="mb-6 has-text-primary has-text-centered"
-    >{{slice.primary.title}}</h1>
+    >{{slice.primary.title}}</h2>
     <p
       v-if="slice.primary.content[0]"
       class="mb-6 has-text-centered has-text-black"
     >{{slice.primary.content[0].text}}</p>
 
     <b-modal v-model="isImageModalActive">
-      <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.image.url" />
+      <img
+        class="rounded-borders"
+        style="max-height: 90vh;"
+        v-if="currentImage"
+        :src="currentImage.image.url"
+      />
     </b-modal>
 
     <div v-if="slice.items" class="columns is-multiline">
       <div v-for="(item, i) in slice.items" :key="i" class="column is-one-quarter is-clickable">
         <img
-          v-if="item.image.url"
+          class="rounded-borders"
+          v-if="item.image.thumb_400_350"
+          @click="currentImage = item, isImageModalActive = true"
+          :src="item.image.thumb_400_350.url"
+        />
+        <img
+          v-else
+          class="rounded-borders"
           @click="currentImage = item, isImageModalActive = true"
           :src="item.image.thumb.url"
         />
@@ -53,15 +65,7 @@ export default {
 </script>
 
 <style lang="scss"  scoped>
-a {
-  color: #111;
-}
 .title {
   margin-bottom: 2em;
-}
-
-img {
-  border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 </style>

@@ -3,9 +3,7 @@
     <slice-zone type="home_page" queryType="single" />
     <div class="has-background-primary pb-6">
       <section class="container">
-        <h1
-          class="is-size-1 has-text-white has-text-centered title my-6 has-text-weight-light"
-        >SERVIZI</h1>
+        <h2 class="has-text-white has-text-centered my-6">SERVIZI</h2>
         <div class="columns is-2 is-multiline">
           <div
             class="column transparent is-one-third"
@@ -60,9 +58,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.rounded-borders {
-  border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-}
-</style>

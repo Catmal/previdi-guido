@@ -18,6 +18,7 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
     "nuxt-buefy": "^0.4.4",
+    "nuxt-purgecss": "^1.0.0",
     "nuxt-sm": "0.0.6",
     "prismic-javascript": "^3.0.2",
     "vue-essential-slices": "^0.2.0",

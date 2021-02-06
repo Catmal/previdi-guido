@@ -3,7 +3,7 @@
     <b-modal v-model="isImageModalActive">
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
-    <h1 class="title has-text-primary">{{slice.primary.Title}}</h1>
+    <h1 class="has-text-primary">{{slice.primary.Title}}</h1>
     <div class="columns is-multiline">
       <div
         v-for="(item, i) in slice.items"
@@ -61,8 +61,5 @@ a {
 }
 .title {
   margin-bottom: 2em;
-}
-.rounded-borders {
-  border-radius: 4px;
 }
 </style>

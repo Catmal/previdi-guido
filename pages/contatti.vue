@@ -15,7 +15,7 @@
     </div>
     <div style=" margin-top:-28%; padding: 15px">
       <div class="container">
-        <h1 class="is-size-1 has-text-weight-light is-uppercase has-text-white">CONTATTI</h1>
+        <h1 class="has-text-white">CONTATTI</h1>
 
         <div class="columns">
           <div class="column">
@@ -23,7 +23,7 @@
               class="card section container mt-4 mb-6"
               style="background: rgba(255,255,255,0.9"
             >
-              <h1 class="mb-6">Come possiamo aiutarti?</h1>
+              <h3 class="mb-6">Come possiamo aiutarti?</h3>
               <form name="contact" netlify>
                 <b-field>
                   <b-input
@@ -59,7 +59,7 @@
             </section>
           </div>
           <div class="column">
-            <section class="card section container my-6" style="background: rgba(255,255,255,0.9">
+            <section class="card section container" style="background: rgba(255,255,255,0.9">
               <h1>TELEFONO</h1>
               <h2>
                 <b-icon icon="phone" size="is-medium" class="mr-2 mt-4"></b-icon>UFFICIO - 0535.97277

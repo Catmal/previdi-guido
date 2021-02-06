@@ -4,9 +4,9 @@
       <b-carousel-item
         v-for="(item, i) in slice.items"
         :key="i"
-        style="height: calc(100vh - 40px); width: 100%"
+        style="height: calc(100vh); width: 100%"
       >
-        <span class="image">
+        <span class="image rounded-borders">
           <img :src="item.image.url" />
         </span>
       </b-carousel-item>

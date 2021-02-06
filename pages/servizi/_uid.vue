@@ -15,17 +15,15 @@
 
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
-          <h1
-            class="is-size-1 has-text-weight-light is-uppercase has-text-white"
-          >{{ $prismic.asText(document.title) }}</h1>
+          <prismic-rich-text :field="document.title" />
 
           <div
             v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
             class="card p-6"
-            style="background: rgba(255,255,255,1)"
+            style="background: rgba(255,255,255,0.9)"
           >
-            <div class="card-content">
-              <p>{{ $prismic.asText(document.content) }}</p>
+            <div class="card-content has-text-centered">
+              <prismic-rich-text :field="document.content" />
             </div>
           </div>
           <slice-zone type="service" :uid="$route.params.uid" />

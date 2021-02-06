@@ -48,6 +48,11 @@
                 "name": "thumb",
                 "width": 300,
                 "height": null
+              },
+              {
+                "name": "thumb_400_350",
+                "width": 400,
+                "height": 350
               }
             ]
           },

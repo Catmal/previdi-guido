@@ -11,9 +11,7 @@
 
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
-          <h1
-            class="is-size-1 has-text-weight-light is-uppercase has-text-white"
-          >{{ $prismic.asText(document.title) }}</h1>
+          <prismic-rich-text :field="document.title" />
 
           <div
             v-if="document.content.length > 0 && document.content[0].text !== ''"
@@ -76,9 +74,7 @@ svg {
   }
 }
 .cont {
-  display: inline-block;
   width: 100%;
-  padding-bottom: 100%;
   overflow: hidden;
   position: relative;
 }
