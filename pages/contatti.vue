@@ -147,14 +147,6 @@ export default {
 }
 </script>
 <style lang="scss"  scoped>
-.home-enter-active,
-.home-leave-active {
-  transition: opacity 0.5s;
-}
-.home-enter,
-.home-leave-active {
-  opacity: 0;
-}
 .form.h4 {
   margin-bottom: 2rem;
 }

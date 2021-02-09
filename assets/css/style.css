@@ -85,3 +85,11 @@ a,
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
+.home-enter-active,
+.home-leave-active {
+  transition: opacity 0.5s;
+}
+.home-enter,
+.home-leave-active {
+  opacity: 0;
+}
