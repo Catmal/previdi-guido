@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins";
+  color: #0A2E36;
 } 
 
 h1 {
@@ -40,7 +41,7 @@ ul {
 
 li {
   font-size: 1.2rem !important;
-  color: #0e9246;
+  color:  #0A2E36;
   font-weight: 600;
 }
 
@@ -55,8 +56,9 @@ li {
 }
 
 p {
-  font-size: 1rem;
-  line-height: 25px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #0A2E36
 }
 
 a,

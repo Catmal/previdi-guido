@@ -120,11 +120,11 @@
     <section>
       <nuxt />
       <footer
-        class="footer has-background-primary has-text-white"
+        class="footer has-background-primary"
         style="padding: 10px; bottom: 0; left: 0; right: 0"
       >
         <div class="content has-text-centered">
-          <p>Copyright 2019 Previdi Guido - Tutti i diritti riservati</p>
+          <p class="has-text-white is-4">Copyright 2021 Previdi Guido - Tutti i diritti riservati</p>
         </div>
       </footer>
     </section>

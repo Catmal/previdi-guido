@@ -74,12 +74,14 @@ export default {
 }
 >>> h2 {
   margin-bottom: 2rem !important;
+  color: #0e9246;
 }
 >>> h3 {
   margin-bottom: 2rem !important;
 }
 >>> ul {
-  margin-bottom: 1rem !important;
+  background: #dee5e5;
+  margin-bottom: 1.5rem !important;
   border: 1px solid #0e9246;
   padding: 1rem;
   border-radius: 4px;

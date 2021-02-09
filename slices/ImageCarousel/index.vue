@@ -1,5 +1,7 @@
 <template>
   <div class="slider">
+    <div v-if="!slice.items.length > 0" style="height: 100vh; width: 100%; background-color: #000"></div>
+
     <b-carousel :indicator-inside="true">
       <b-carousel-item
         v-for="(item, i) in slice.items"
@@ -7,7 +9,7 @@
         style="height: calc(100vh); width: 100%"
       >
         <span class="image rounded-borders">
-          <img :src="item.image.url" />
+          <img v-if="item.image.url" :src="item.image.url" />
         </span>
       </b-carousel-item>
     </b-carousel>

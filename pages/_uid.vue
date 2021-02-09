@@ -12,17 +12,14 @@
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
           <prismic-rich-text :field="document.title" />
-
-          <div
-            v-if="document.content.length > 0 && document.content[0].text !== ''"
-            class="card p-6"
-            style="background: rgba(255,255,255,0.9)"
-          >
-            <div class="card-content">
-              <p>{{ $prismic.asText(document.content) }}</p>
+          <div class="card p-6" style="background: rgba(255,255,255,0.9)">
+            <div v-if="document.content.length > 0 && document.content[0].text !== ''">
+              <div class="card-content">
+                <p>{{ $prismic.asText(document.content) }}</p>
+              </div>
             </div>
+            <slice-zone type="page" :uid="$route.params.uid" />
           </div>
-          <slice-zone type="page" :uid="$route.params.uid" />
         </div>
       </div>
     </div>
