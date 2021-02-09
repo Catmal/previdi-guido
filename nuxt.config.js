@@ -26,6 +26,11 @@ export default {
       rel: "preconnect",
       href: "https://prismic.io/",
       crossorigin: true
+    },
+    {
+      rel: "preconnect",
+      href: "https://vivai-previdi.prismic.io",
+      crossorigin: true
     }
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700", },],
     script: [{
