@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <slice-zone type="home_page" queryType="single" />
-    <div class="has-background-primary pb-6">
+    <div class="has-background-primary p-3 pb-6">
       <section class="container">
         <h2 class="has-text-white has-text-centered my-6">SERVIZI</h2>
         <div class="columns is-2 is-multiline">

@@ -4,11 +4,11 @@
       <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
     </b-modal>
     <h1 class="has-text-primary">{{slice.primary.Title}}</h1>
-    <div class="columns is-multiline">
+    <div class="columns is-multiline is-mobile">
       <div
         v-for="(item, i) in slice.items"
         :key="i"
-        class="column column is-one-quarter is-clickable"
+        class="column is-half-mobile is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="position: relative">
           <img
@@ -48,18 +48,4 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
-.section {
-  position: relative;
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
-a {
-  color: #111;
-}
-.title {
-  margin-bottom: 2em;
-}
-</style>
+

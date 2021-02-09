@@ -1,12 +1,12 @@
 <template>
-  <section class="card section container mt-4 mb-6" style="background: rgba(255,255,255,0.95)">
+  <section class="section container">
     <h2
       v-if="slice.primary.title"
-      class="mb-6 has-text-primary has-text-centered"
+      class="has-text-primary has-text-centered"
     >{{slice.primary.title}}</h2>
     <p
       v-if="slice.primary.content[0]"
-      class="mb-6 has-text-centered has-text-black"
+      class="has-text-centered has-text-black"
     >{{slice.primary.content[0].text}}</p>
 
     <b-modal v-model="isImageModalActive">
@@ -18,8 +18,12 @@
       />
     </b-modal>
 
-    <div v-if="slice.items" class="columns is-multiline">
-      <div v-for="(item, i) in slice.items" :key="i" class="column is-one-quarter is-clickable">
+    <div class="columns is-multiline is-mobile">
+      <div
+        v-for="(item, i) in slice.items"
+        :key="i"
+        class="column is-half-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd is-clickable"
+      >
         <img
           class="rounded-borders"
           v-if="item.image.thumb_400_350"
@@ -27,7 +31,7 @@
           :src="item.image.thumb_400_350.url"
         />
         <img
-          v-else
+          v-if="!item.image.thumb_400_350 && item.image.thumb"
           class="rounded-borders"
           @click="currentImage = item, isImageModalActive = true"
           :src="item.image.thumb.url"

@@ -6,26 +6,52 @@ h1 {
   font-family: "Poppins";
   font-size: 3.5rem!important;
   color: #fff;
-  font-weight: 300!important;
   text-transform: uppercase;
+  margin-bottom: 1rem!important;
+  font-weight: 300!important;
+
 }
 
 h2 {
   font-size: 3rem!important;
   font-weight: 300!important;
+  line-height: 3.5rem!important;
 
 }
 
 h3 {
   font-size: 2rem!important;
   font-weight: 400;
-  color: #0e9246;
+  line-height: 2.5rem!important;
+
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.5rem!important;
   font-weight: 600;
+  line-height: 2rem!important;
+}
 
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  font-size: 1.2rem !important;
+  color: #0e9246;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+  ul {
+    flex-direction: column;
+
+  }
+  li{
+    margin-top: 1.5rem!important;
+  } 
 }
 
 p {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="position:relative;">
+    <div style="position:relative">
       <svg
         style="position: sticky; top: 100px"
         xmlns="http://www.w3.org/2000/svg"
@@ -13,20 +13,19 @@
         />
       </svg>
 
-      <div style=" margin-top:-28%; padding: 15px">
-        <div class="container">
+      <div style=" margin-top:-28%">
+        <div class="container p-4">
           <prismic-rich-text :field="document.title" />
-
-          <div
-            v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
-            class="card p-6"
-            style="background: rgba(255,255,255,0.9)"
-          >
-            <div class="card-content has-text-centered">
-              <prismic-rich-text :field="document.content" />
+          <div class="card pt-6" style="background: rgba(255,255,255,0.9)">
+            <div
+              v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
+            >
+              <div class="card-content has-text-centered">
+                <prismic-rich-text :field="document.content" />
+              </div>
             </div>
+            <slice-zone type="service" :uid="$route.params.uid" />
           </div>
-          <slice-zone type="service" :uid="$route.params.uid" />
         </div>
       </div>
     </div>
@@ -63,13 +62,29 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
+<style   scoped>
 .home-enter-active,
 .home-leave-active {
   transition: opacity 0.5s;
 }
+
 .home-enter,
 .home-leave-active {
   opacity: 0;
+}
+>>> h2 {
+  margin-bottom: 2rem !important;
+}
+>>> h3 {
+  margin-bottom: 2rem !important;
+}
+>>> ul {
+  margin-bottom: 1rem !important;
+  border: 1px solid #0e9246;
+  padding: 1rem;
+  border-radius: 4px;
+}
+>>> h4 {
+  margin-bottom: 2rem !important;
 }
 </style>

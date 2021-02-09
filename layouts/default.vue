@@ -101,6 +101,12 @@
               tag="router-link"
               :to="{ path: '/servizi/allestimenti-eventi' }"
             >Allestimenti Eventi</b-navbar-item>
+            <b-navbar-item
+              active-class="is-active"
+              class="has-text-primary"
+              tag="router-link"
+              :to="{ path: '/servizi/lavori-vari' }"
+            >Lavori Vari</b-navbar-item>
           </b-navbar-dropdown>
           <b-navbar-item
             active-class="is-active"

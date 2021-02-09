@@ -13,10 +13,10 @@ export const DefaultSlice = () => ({
     Slice,
     SliceZone,
   },
-  data() {
+  data () {
     return {
       mock: mocks[0],
-      resolver() {
+      resolver () {
         return Slice
       },
     }
