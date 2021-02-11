@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="cont">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200">
+    <div style="position:relative">
+      <svg
+        style="position: sticky; top: 94px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 200"
+      >
         <path
           fill="#0e9246"
           fill-opacity="1"
@@ -30,6 +34,7 @@
 import SliceZone from 'vue-slicezone'
 
 export default {
+  
   transition: 'home',
     components: {
         SliceZone

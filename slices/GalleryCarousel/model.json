@@ -10,41 +10,38 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "GalleryCarousel",
-      "primary": {
-        "Title": {
-          "type": "Text",
-          "config": {
-            "label": "",
-            "id": "Title",
-            "placeholder": ""
-          }
-        }
-      },
+      "primary": {},
       "items": {
-        "coverImage": {
+        "firstImage": {
+          "config": {
+            "label": "",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "thumbb",
+                "width": 350,
+                "height": null
+              }
+            ]
+          },
+          "type": "Image"
+        },
+        "secondImage": {
           "type": "Image",
           "config": {
-            "id": "coverImage",
+            "id": "secondImage",
             "label": "",
             "constraint": {},
             "thumbnails": []
           }
         },
-        "additionalImage": {
+        "thirdImage": {
           "type": "Image",
           "config": {
-            "id": "additionalImage",
+            "id": "thirdImage",
             "label": "",
             "constraint": {},
             "thumbnails": []
-          }
-        },
-        "name": {
-          "type": "Text",
-          "config": {
-            "label": "",
-            "id": "name",
-            "placeholder": ""
           }
         }
       }

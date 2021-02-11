@@ -2,7 +2,7 @@
   <div>
     <div style="position:relative">
       <svg
-        style="position: sticky; top: 100px"
+        style="position: sticky; top: 94px"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 640 200"
       >
@@ -37,6 +37,15 @@ import SliceZone from 'vue-slicezone'
 
 export default {
   transition: 'home',
+  head () {
+    return {
+      title: this.document.title[0].text,
+      meta: [
+        { hid: 'og-title', property: 'og:title', content: "kk" },
+        // other meta
+      ]
+    }
+  },
     components: {
         SliceZone
     },

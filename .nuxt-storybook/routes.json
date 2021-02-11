@@ -13,6 +13,13 @@
     "_name": "_700c38c0"
   },
   {
+    "name": "piante",
+    "path": "/piante",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/piante.vue",
+    "chunkName": "pages/piante",
+    "_name": "_05506d5d"
+  },
+  {
     "name": "servizi-uid",
     "path": "/servizi/:uid?",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/servizi/_uid.vue",

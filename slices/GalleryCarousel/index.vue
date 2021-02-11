@@ -1,9 +1,8 @@
 <template>
-  <section class="section container" style="background: rgba(255,255,255,0.95)">
+  <section class="container">
     <b-modal v-model="isImageModalActive">
-      <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.coverImage.url" />
+      <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.firstImage.url" />
     </b-modal>
-    <h1 class="has-text-primary">{{slice.primary.Title}}</h1>
     <div class="columns is-multiline is-mobile">
       <div
         v-for="(item, i) in slice.items"
@@ -12,15 +11,22 @@
       >
         <div style="position: relative">
           <img
+            v-if="item.firstImage.thumbb"
             class="rounded-borders"
             @click="currentImage = item, isImageModalActive = true"
-            :src="item.coverImage.url"
+            :src="item.firstImage.thumbb.url"
+          />
+          <img
+            v-else
+            class="rounded-borders"
+            @click="currentImage = item, isImageModalActive = true"
+            :src="item.firstImage.url"
           />
           <div
             class="p-4 rounded-borders"
             style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
-            <p class="has-text-black">{{item.name}}</p>
+            <p class="has-text-black">{{item.firstImage.alt}}</p>
           </div>
         </div>
       </div>

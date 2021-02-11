@@ -37,6 +37,19 @@ import SliceZone from 'vue-slicezone'
 
 export default {
   name: 'HomePage',
+  head: {
+    title: 'Vivai Previdi Guido - Vivai Piante & Azienda Agricola',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'my website description'
+      }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
   components: {
     SliceZone
   },
