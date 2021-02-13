@@ -1,13 +1,25 @@
 <template>
   <section class="container">
     <b-modal v-model="isImageModalActive">
-      <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.firstImage.url" />
+      <img style="max-height: 90vh;" v-if="currentImage && Object.keys(currentImage.secondImage).length === 0 " :src="currentImage.firstImage.url" />
+      <b-carousel v-if="currentImage.secondImage && Object.keys(currentImage.secondImage).length > 0"  class="carousel"  :indicator-inside="true">
+      <b-carousel-item style="height: 100%"  :key="i">
+        <span class="rounded-borders">
+           <img style="max-height: 90vh;" v-if="currentImage" :src="currentImage.firstImage.url" />
+        </span>
+      </b-carousel-item>
+        <b-carousel-item style="height: 100%"  :key="i">
+        <span class="rounded-borders">
+           <img style="max-height: 90vh;" v-if="currentImage.secondImage" :src="currentImage.secondImage.url" />
+        </span>
+      </b-carousel-item>
+       </b-carousel>
     </b-modal>
     <div class="columns is-multiline is-mobile">
       <div
         v-for="(item, i) in slice.items"
         :key="i"
-        class="column is-half-mobile is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
+        class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="position: relative">
           <img

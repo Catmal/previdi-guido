@@ -1,15 +1,12 @@
 <template>
-  <div class="slider">
-    <div v-if="!slice.items.length > 0" style="height: 100vh; width: 100%; background-color: #000"></div>
-
-    <b-carousel :indicator-inside="true">
-      <b-carousel-item
-        v-for="(item, i) in slice.items"
-        :key="i"
-        style="height: calc(100vh); width: 100%"
-      >
-        <span class="image rounded-borders">
-          <img v-if="item.image.url" :src="item.image.url" />
+  <div
+    class="slider"
+   
+  >
+    <b-carousel  class="carousel"  :indicator-inside="true">
+      <b-carousel-item style="height: 100%" v-for="(item, i) in slice.items" :key="i">
+        <span class="rounded-borders">
+          <img style="height: 100%" v-if="item.image.url" :src="item.image.url" />
         </span>
       </b-carousel-item>
     </b-carousel>
@@ -33,7 +30,20 @@ export default {
 
 <style lang="scss"  scoped>
 .slider {
-  position: relative;
-  top: -94px;
+max-width: 100%;
+    max-height: 100vh ;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: -94px;
+    display: flex;
+  justify-content: center;
+  
 }
+
+
+
+
 </style>

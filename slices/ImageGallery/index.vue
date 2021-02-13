@@ -6,7 +6,7 @@
     >{{slice.primary.title}}</h2>
     <p
       v-if="slice.primary.content[0]"
-      class="has-text-centered has-text-black"
+      class="has-text-centered has-text-black mb-6"
     >{{slice.primary.content[0].text}}</p>
 
     <b-modal v-model="isImageModalActive">
@@ -22,8 +22,11 @@
       <div
         v-for="(item, i) in slice.items"
         :key="i"
-        class="column is-half-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd is-clickable"
+        class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd is-clickable"
       >
+      <div style="width: 400px; height:350px; background: #000" v-if="!item.image">
+
+      </div>
         <img
           class="rounded-borders"
           v-if="item.image.thumb_400_350"

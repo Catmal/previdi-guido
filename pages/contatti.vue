@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div style="position:relative;">
+    <!-- <div style="position:relative;">
       <svg
         style="position: sticky; top: 70px"
         xmlns="http://www.w3.org/2000/svg"
@@ -12,17 +12,19 @@
           d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
         />
       </svg>
-    </div>
-    <div style=" margin-top:-28%; padding: 15px">
-      <div class="container">
-        <h1 class="has-text-white">CONTATTI</h1>
+    </div>-->
+    <div
+      style="background-image: url('/vivai-previdi-guido.jpg'); overflow-y: scroll;  width: 100%; min-height: 100vh; position: fixed; top: 0; bottom:0; left:0"
+    >
+      <div class="container p-4" style="margin-top: 7%">
+        <h1 class="has-text-white pt-6">CONTATTI</h1>
         <div class="columns">
           <div class="column">
             <section
               class="card section container mb-6"
-              style="background: rgba(255,255,255,0.9; height: 100%"
+              style="background: rgba(255,255,255,0.85); height: 100%"
             >
-              <h3 class="mb-6 is-text-primary">Come possiamo aiutarti?</h3>
+              <h3 class="mb-6 has-text-primary">Come possiamo aiutarti?</h3>
               <input type="hidden" name="form-name" value="ask-question" />
               <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
                 <b-field>
