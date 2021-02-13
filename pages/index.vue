@@ -1,6 +1,6 @@
 <template>
-  <section class="hero">
-    <slice-zone type="home_page" queryType="single" />
+  <section >
+    <slice-zone class="hero" type="home_page" queryType="single" />
     <div class="has-background-primary p-3 pb-6">
       <section class="container">
         <h2 class="has-text-white has-text-centered my-6">SERVIZI</h2>
@@ -10,7 +10,7 @@
             v-for="service in services"
             :key="service.id"
           >
-            <div style="position: relative">
+            <div class="is-clickable" style="position: relative" click="goToService(service)">
               <img
                 v-if="service.data.home_image.home_thumb"
                 class="rounded-borders"
@@ -53,6 +53,11 @@ export default {
   components: {
     SliceZone
   },
+  methods: {
+    goToService(service) {
+      this.$router.push("/servizi/" + service.uid)
+    }
+  },
    async asyncData({ $prismic, error }) {
     try{
       // Query to get post content
@@ -71,3 +76,8 @@ export default {
   },
 }
 </script>
+<style scoped>
+.hero {
+  min-height: 100vh;
+}
+</style>

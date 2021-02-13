@@ -94,3 +94,14 @@ a,
 section container {
   padding-top: 0 !important;
 }
+
+.bkg-enter-active {
+  transition: all 1.2s ease;
+}
+
+.bkg-enter, .bkg-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 1s ease;
+}

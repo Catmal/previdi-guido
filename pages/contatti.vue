@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="min-height: 100vh">
     <!-- <div style="position:relative;">
       <svg
         style="position: sticky; top: 70px"
@@ -135,6 +135,19 @@
 <script>
 export default {
     transition: 'home',
+    head: {
+    title: 'Vivai Previdi Guido - Contatti',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  }, 
     data() {
       return {
         submission: {}

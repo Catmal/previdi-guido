@@ -27,18 +27,21 @@
       <div style="width: 400px; height:350px; background: #000" v-if="!item.image">
 
       </div>
+        <b-skeleton  v-if="!slice.items" width="400px" height="350px"></b-skeleton>
         <img
           class="rounded-borders"
           v-if="item.image.thumb_400_350"
           @click="currentImage = item, isImageModalActive = true"
           :src="item.image.thumb_400_350.url"
         />
+
         <img
           v-if="!item.image.thumb_400_350 && item.image.thumb"
           class="rounded-borders"
           @click="currentImage = item, isImageModalActive = true"
           :src="item.image.thumb.url"
         />
+   
       </div>
     </div>
     <b-button

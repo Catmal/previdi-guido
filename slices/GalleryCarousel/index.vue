@@ -22,6 +22,7 @@
         class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="position: relative">
+          <b-skeleton  v-if="!slice.items" width="400px" height="350px"></b-skeleton>
           <img
             v-if="item.firstImage.thumbb"
             class="rounded-borders"

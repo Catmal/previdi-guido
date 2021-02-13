@@ -7,6 +7,7 @@
       <b-carousel-item style="height: 100%" v-for="(item, i) in slice.items" :key="i">
         <span class="rounded-borders">
           <img style="height: 100%" v-if="item.image.url" :src="item.image.url" />
+          
         </span>
       </b-carousel-item>
     </b-carousel>

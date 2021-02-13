@@ -16,7 +16,7 @@
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">
           <h1>Piante</h1>
-          <div class="card p-6" style="background: rgba(255,255,255,0.9)">
+          <div class="card p-6" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
             <b-tabs type="is-boxed" v-model="activeTab">
               <b-tab-item label="Alberature">
                 <slice-zone type="piante" uid="alberature" />
@@ -45,7 +45,19 @@
 import SliceZone from 'vue-slicezone'
 
 export default {
-  
+ head: {
+    title: 'Vivai Previdi Guido - Vendita Piante',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: ''
+      }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  }, 
   transition: 'home',
   data() {
     return {
