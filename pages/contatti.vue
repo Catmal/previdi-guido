@@ -27,7 +27,7 @@
               style="background: rgba(255,255,255,0.85); height: 100%"
             >
               <h3 class="mb-6 has-text-primary">Come possiamo aiutarti?</h3>
-              <form method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form action="/thanks"  method="post" name="contact" data-netlify="true"  netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contact"  />
 
                 <b-field>
@@ -79,7 +79,7 @@
                     type="textarea"
                     icon-right="close-circle"
                     icon-right-clickable
-                    name="messaggio"
+                    name="message"
                     v-model="submission.message"
                     @icon-right-click="submission.message = ''"
                   ></b-input>
