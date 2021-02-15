@@ -10,7 +10,7 @@
             v-for="service in services"
             :key="service.id"
           >
-            <div class="is-clickable" style="position: relative" click="goToService(service)">
+            <div class="is-clickable" style="position: relative" @click="goToService(service)">
               <img
                 v-if="service.data.home_image.home_thumb"
                 class="rounded-borders"
@@ -20,7 +20,7 @@
                 class="p-4 rounded-borders"
                 style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
               >
-                <p class="has-text-black">{{service.data.title[0].text}}</p>
+                <h4 class="has-text-primary">{{service.data.title[0].text}}</h4>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ export default {
       // Query to get post content
       const services = await $prismic.api.query(
         $prismic.predicates.at("document.type", "service"),
-        { orderings : '[my.service.date desc]' }
+        { orderings : '[my.service.sort ]' }
       )
       // Returns data to be used in template
       return {
@@ -78,6 +78,6 @@ export default {
 </script>
 <style scoped>
 .hero {
-  min-height: 100vh;
+  height: 100vh!important;
 }
 </style>

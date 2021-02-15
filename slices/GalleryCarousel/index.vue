@@ -22,7 +22,7 @@
         class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="position: relative">
-          <b-skeleton  v-if="!slice.items" width="400px" height="350px"></b-skeleton>
+          <b-skeleton  v-if="!slice" width="400px" height="350px"></b-skeleton>
           <img
             v-if="item.firstImage.thumbb"
             class="rounded-borders"
@@ -39,7 +39,7 @@
             class="p-4 rounded-borders"
             style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
-            <p class="has-text-black">{{item.firstImage.alt}}</p>
+            <h5 class="has-text-black">{{item.firstImage.alt}}</h5>
           </div>
         </div>
       </div>

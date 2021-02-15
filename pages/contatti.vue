@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 100vh">
+  <div style="min-height: 100vh; height: 100%;">
     <!-- <div style="position:relative;">
       <svg
         style="position: sticky; top: 70px"
@@ -14,15 +14,16 @@
       </svg>
     </div>-->
     <div
-      style="background-image: url('/vivai-previdi-guido.jpg'); overflow-y: scroll;  width: 100%; min-height: 100vh; position: fixed; top: 0; bottom:0; left:0"
+      class="background"
     >
-      <div class="container p-4" style="margin-top: 7%">
+    <div style="overlay">
+      <div class="container p-4" >
         <h1 class="has-text-white pt-6">CONTATTI</h1>
         <div class="columns">
           <div class="column">
             <section
               class="card section container mb-6"
-              style="background: rgba(255,255,255,0.85); height: 100%"
+              style="background: rgba(255,255,255,0.8); height: 100%"
             >
               <h3 class="mb-6 has-text-primary">Come possiamo aiutarti?</h3>
               <input type="hidden" name="form-name" value="ask-question" />
@@ -31,7 +32,7 @@
                   <b-input
                     autofocus
                     size="is-large"
-                    placeholder="Nome"
+                    placeholder="Nome*"
                     type="text"
                     icon="account"
                     icon-right="close-circle"
@@ -47,7 +48,7 @@
                   <b-input
                     required
                     size="is-large"
-                    placeholder="Email"
+                    placeholder="Email*"
                     type="email"
                     icon="email"
                     icon-right="close-circle"
@@ -87,7 +88,7 @@
                 <b-field class="my-6">
                   <b-checkbox
                     required
-                  >Dichiaro di aver preso visione della informativa privacy e, autorizzo il trattamento dei miei dati personali, in relazione a quanto ivi indicato. Leggi Informativa *</b-checkbox>
+                  ><p>Dichiaro di aver preso visione della informativa privacy e, autorizzo il trattamento dei miei dati personali, in relazione a quanto ivi indicato. Leggi Informativa *</p></b-checkbox>
                 </b-field>
                 <b-button
                   expanded
@@ -100,35 +101,36 @@
           </div>
           <div class="column">
             <section
-              class="card info section container"
-              style="background: rgba(255,255,255,0.9); height: 100%"
+              class="has-text-white has-text-right  container"
+              style=" height: 100%"
             >
-              <p>
-                <b-icon icon="phone" size="is-small" class="mr-2 mt-4"></b-icon>UFFICIO | 0535.97277
-              </p>
-              <p>
+              <h4>
+                <b-icon icon="phone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>UFFICIO | 0535.97277
+              </h4>
+              <h4>
                 <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4"></b-icon>GUIDO | 348 0736481
-              </p>
-              <p>
+              </h4>
+              <h4>
                 <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4"></b-icon>MATTEO | 388 6351793
-              </p>
+              </h4>
 
-              <h3 class="mt-6 has-text-primary">ORARI APERTURA</h3>
-              <h4 class="has-text-bold">ORARIO ESTIVO</h4>
-              <p>da lunedi al sabato | 8.30 – 12.00 14.30 – 19.00</p>
-              <p>Chiuso sabato</p>
+              <h2 class="mt-6 has-text-weight-bold has-text-primary">ORARI APERTURA</h2>
+              <h4 class="has-text-primary has-text-weight-medium">ORARIO ESTIVO</h4>
+              <p class="has-text-white">da lunedi al sabato | 8.30 – 12.00 | 14.30 – 19.00</p>
+              <p class="has-text-white">Chiuso il sabato</p>
 
-              <h4 class="has-text-bold">LUGLIO E AGOSTO</h4>
-              <p>da lunedi al venerdi | 8.30 – 12.00 16.30 – 19.00</p>
-              <p>Chiuso sabato e domenica</p>
+              <h4 class="has-text-primary has-text-weight-medium">LUGLIO E AGOSTO</h4>
+              <p class="has-text-white">da lunedi al venerdi | 8.30 – 12.00 | 16.30 – 19.00</p>
+              <p class="has-text-white">Chiuso sabato e domenica</p>
 
-              <h4 class="has-text-bold">ORARIO INVERNALE</h4>
-              <p>da lunedi al sabato | 8.30 – 12.00 14.30 – 19.00</p>
-              <p>Chiuso sabato e domenica</p>
+              <h4 class="has-text-primary has-text-weight-medium">ORARIO INVERNALE</h4>
+              <p class="has-text-white">da lunedi al sabato | 8.30 – 12.00 14.30 – 19.00</p>
+              <p class="has-text-white">Chiuso sabato e domenica</p>
             </section>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -168,4 +170,24 @@ export default {
 h4 {
   margin-top: 2rem !important;
 }
+
+.background {
+  background-image: url('/vivai-previdi-guido.jpg'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8)); 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+      background-blend-mode: overlay;
+}
+
+// .background:before {
+//   content: "";
+//   position: absolute;
+//   left: 0; right: 0;
+//   top: 0; bottom: 0;
+//   background: rgba(0,0,0,.5);
+//   height: 100%;
+// }
+
 </style>

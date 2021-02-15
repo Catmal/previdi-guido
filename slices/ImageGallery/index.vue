@@ -7,7 +7,7 @@
     <p
       v-if="slice.primary.content[0]"
       class="has-text-centered has-text-black mb-6"
-    >{{slice.primary.content[0].text}}</p>
+    ><prismic-rich-text :field="slice.primary.content" /></p>
 
     <b-modal v-model="isImageModalActive">
       <img
