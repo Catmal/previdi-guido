@@ -1,5 +1,5 @@
 <template>
-  <div style="min-height: 100vh; height: 100%;">
+  <div style="min-height: 100vh; height: 100%; margin-top: -94px">
     <!-- <div style="position:relative;">
       <svg
         style="position: sticky; top: 70px"
@@ -15,9 +15,10 @@
     </div>-->
     <div
       class="background"
+      style="padding-top: 120px"
     >
-    <div style="overlay">
-      <div class="container p-4" >
+    <div class="overlay">
+      <div  class="container p-4" >
         <h1 class="has-text-white pt-6">CONTATTI</h1>
         <div class="columns">
           <div class="column">
@@ -31,7 +32,6 @@
                 <b-field>
                   <b-input
                     autofocus
-                    size="is-large"
                     placeholder="Nome*"
                     type="text"
                     icon="account"
@@ -47,7 +47,6 @@
                 <b-field>
                   <b-input
                     required
-                    size="is-large"
                     placeholder="Email*"
                     type="email"
                     icon="email"
@@ -61,7 +60,6 @@
                 </b-field>
                 <b-field>
                   <b-input
-                    size="is-large"
                     placeholder="Telefono"
                     type="phone"
                     icon="phone"
