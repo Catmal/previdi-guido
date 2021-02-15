@@ -24,11 +24,12 @@
           <div class="column">
             <section
               class="card section container mb-6"
-              style="background: rgba(255,255,255,0.8); height: 100%"
+              style="background: rgba(255,255,255,0.85); height: 100%"
             >
               <h3 class="mb-6 has-text-primary">Come possiamo aiutarti?</h3>
-              <input type="hidden" name="form-name" value="ask-question" />
-              <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+              <form method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact"  />
+
                 <b-field>
                   <b-input
                     autofocus
