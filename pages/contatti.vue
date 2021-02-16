@@ -27,11 +27,10 @@
               style="background: rgba(255,255,255,0.85); height: 100%"
             >
               <h3 class="mb-6 has-text-primary">Come possiamo aiutarti?</h3>
-              <form action="/thanks"  method="post" name="contact" data-netlify="true"  netlify-honeypot="bot-field">
+              <form   method="post" name="contact" data-netlify="true"  data-netlify-honeypot="bot-field">
               <input type="hidden" name="form-name" value="contact"  />
 
-                <b-field>
-                  <b-input
+                  <input
                     autofocus
                     placeholder="Nome*"
                     type="text"
@@ -43,10 +42,9 @@
                     @icon-right-click="submission.name = ''"
                     validation-message="Campo nome obbligatorio"
                     required
-                  ></b-input>
-                </b-field>
-                <b-field>
-                  <b-input
+                  />
+               
+                  <input
                     required
                     placeholder="Email*"
                     type="email"
@@ -57,7 +55,7 @@
                     validation-message="Inserisci un indirizzo email valido"
                     v-model="submission.email"
                     @icon-right-click="submission.email = ''"
-                  ></b-input>
+                  ></input>
                 </b-field>
                 <b-field>
                   <b-input
@@ -82,7 +80,7 @@
                     name="message"
                     v-model="submission.message"
                     @icon-right-click="submission.message = ''"
-                  ></b-input>
+                  />
                 </b-field>
                 <b-field class="my-6">
                   <b-checkbox
@@ -92,8 +90,8 @@
                 <b-button
                   expanded
                   class="has-background-primary p-4 has-text-white rounded-borders"
-                  type="submit"
-                  active:disabled="isDisabled"
+                  
+                 
                 >Invia</b-button>
               </form>
             </section>
