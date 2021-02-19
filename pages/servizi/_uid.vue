@@ -1,6 +1,15 @@
 <template>
   <div>
-    <div style="position:relative">
+    <div :style="{ 
+      backgroundImage: 'url(' + document.background_image.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
+      backgroundBlendMode: overlay,
+      backgroundAttachment: fixed,
+      backgrounPosition: center,
+      backgroundRepeat: no-repeat,
+      backgroundSize: cover,
+     
+
+      }" class="background" style="position:relative">
       <transition name="bkg">
       <svg
         v-if="show"
@@ -10,7 +19,7 @@
       >
         <path
           fill="#0e9246"
-          fill-opacity="1"
+          fill-opacity="0"
           d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
         />
       </svg>
@@ -18,7 +27,7 @@
       <div style=" margin-top:-28%">
         <div class="container p-4">
           <prismic-rich-text :field="document.title" />
-          <div class="card pt-6" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
+          <div class="card pt-6" style="min-height: 100vh; background: rgba(255,255,255,0.85)">
             <div
               v-if="document.content && document.content.length > 0 && document.content[0].text !== ''"
             >
@@ -92,11 +101,19 @@ export default {
   opacity: 0;
 }
 >>> h2 {
-  margin-bottom: 2rem !important;
+  margin-bottom: 40px !important;
   color: #0e9246;
+  font-weight: 700!important;
 }
 >>> h3 {
-  margin-bottom: 2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 40px !important;
+  color: #0e9246;
+  
+}
+>>> h4 {
+  margin-bottom: 4rem !important;
+  
 }
 >>> ul {
   background: #dee5e5;
@@ -107,5 +124,14 @@ export default {
 }
 >>> h4 {
   margin-bottom: 2rem !important;
+}
+
+.background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+      background-blend-mode: overlay;
 }
 </style>

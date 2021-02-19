@@ -20,7 +20,7 @@
                 class="p-4 rounded-borders"
                 style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
               >
-                <h4 class="has-text-primary">{{service.data.title[0].text}}</h4>
+                <h5 class="is-uppercase" >{{service.data.title[0].text}}</h5>
               </div>
             </div>
           </div>

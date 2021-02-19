@@ -38,7 +38,7 @@ export default {
       crossorigin: true
     },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Benne:300,400,500,600,700", },
-  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700", }],
+  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=BenchNine:300,500,700", }],
     script: [{
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {

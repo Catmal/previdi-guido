@@ -39,7 +39,7 @@
             class="p-4 rounded-borders"
             style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
-            <h5 class="has-text-black">{{item.firstImage.alt}}</h5>
+            <h5 >{{item.firstImage.alt}}</h5>
           </div>
         </div>
       </div>

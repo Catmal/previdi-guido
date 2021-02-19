@@ -119,16 +119,18 @@
     </div>
     <section>
       <nuxt />
-      <footer
-        class="footer has-background-primary"
-        style="padding: 10px; bottom: 0; left: 0; right: 0; z-index: 20"
-      >
-        <div class="content has-text-centered">
-          <div class="has-text-white is-size-6">Copyright 2021 Previdi Guido - Tutti i diritti riservati</div>
-        </div>
-      </footer>
+     <Footer />
     </section>
   </div>
 </template>
+
+<script>
+import Footer from '../components/Footer'
+export default {
+  components: {
+    Footer
+  }
+}
+</script>
 
 
