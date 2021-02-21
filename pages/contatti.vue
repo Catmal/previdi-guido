@@ -106,6 +106,7 @@
                     </b-checkbox>
                   </b-field>
                   <b-button
+                    type="submit"
                     expanded
                     class="has-background-primary p-4 has-text-white rounded-borders"
                   >Invia</b-button>
