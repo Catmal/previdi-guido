@@ -47,12 +47,12 @@
             @click="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.url"
           />
-          <!-- <div
+          <div
             class="p-4 rounded-borders-bottom"
             style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
             <h5>{{item.firstImage.alt}}</h5>
-          </div>-->
+          </div>
         </div>
       </div>
     </div>

@@ -20,6 +20,7 @@
     "nuxt-buefy": "^0.4.4",
     "nuxt-sm": "0.0.6",
     "prismic-javascript": "^3.0.2",
+    "vue-cookie-accept-decline": "^5.4.0",
     "vue-essential-slices": "^0.2.0",
     "vue-slicezone": "0.0.29"
   },

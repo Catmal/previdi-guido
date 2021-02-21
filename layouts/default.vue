@@ -1,5 +1,34 @@
 <template>
   <div>
+    <vue-cookie-accept-decline
+      :ref="'myPanel1'"
+      :elementId="'myPanel1'"
+      :debug="false"
+      :position="'bottom-left'"
+      :type="'floating'"
+      :disableDecline="true"
+      :transitionName="'slideFromBottom'"
+      :showPostponeButton="false"
+      @status="cookieStatus"
+    >
+      <!-- Optional -->
+      <div slot="postponeContent">&times;</div>
+
+      <!-- Optional -->
+      <div slot="message">
+        Questo sito fa uso di cookie per migliorare l’esperienza di navigazione degli utenti e per raccogliere informazioni sull’utilizzo del sito stesso.
+        <a
+          href="/privacy-policy-cookie-consent"
+          target="_blank"
+        >Info</a>
+      </div>
+
+      <!-- Optional -->
+      <div slot="declineContent">OPT OUT</div>
+
+      <!-- Optional -->
+      <div slot="acceptContent">ACCETTA</div>
+    </vue-cookie-accept-decline>
     <!-- <nav style="height: 40px" class="level has-background-primary has-text-white p-2">
       <div class="level-item">
         <div>
@@ -128,10 +157,13 @@
 </template>
 
 <script>
+import VueCookieAcceptDecline from 'vue-cookie-accept-decline'
+import 'vue-cookie-accept-decline/dist/vue-cookie-accept-decline.css'
 import Footer from '../components/Footer'
 export default {
   components: {
-    Footer
+    Footer,
+    VueCookieAcceptDecline
   }
 }
 </script>
