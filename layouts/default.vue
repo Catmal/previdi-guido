@@ -114,12 +114,15 @@
             tag="router-link"
             :to="{ path: '/contatti' }"
           >Contatti</b-navbar-item>
+          <b-navbar-item icon="phone" href="https://www.facebook.com/guidoprevidi" target="_blank">
+            <img style="max-height: 30px;" src="/facebook.png" />
+          </b-navbar-item>
         </template>
       </b-navbar>
     </div>
     <section>
       <nuxt />
-     <Footer />
+      <Footer />
     </section>
   </div>
 </template>

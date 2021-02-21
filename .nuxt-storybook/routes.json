@@ -20,6 +20,13 @@
     "_name": "_05506d5d"
   },
   {
+    "name": "thanks",
+    "path": "/thanks",
+    "component": "/home/mirco/Webapps/vivai-previdi/pages/thanks.vue",
+    "chunkName": "pages/thanks",
+    "_name": "_339b6e4f"
+  },
+  {
     "name": "servizi-uid",
     "path": "/servizi/:uid?",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/servizi/_uid.vue",

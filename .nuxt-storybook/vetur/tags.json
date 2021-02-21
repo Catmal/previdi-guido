@@ -5,6 +5,12 @@
   "LazyCard": {
     "description": "Auto imported from /components/Card.vue"
   },
+  "Footer": {
+    "description": "Auto imported from /components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from /components/Footer.vue"
+  },
   "Logo": {
     "description": "Auto imported from /components/Logo.vue"
   },

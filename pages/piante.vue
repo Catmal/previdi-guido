@@ -1,6 +1,17 @@
 <template>
   <div>
-    <div style="position:relative">
+    <div
+      :style="{ 
+      backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
+      backgroundBlendMode: overlay,
+      backgroundAttachment: fixed,
+      backgrounPosition: center,
+      backgroundRepeat: no-repeat,
+      backgroundSize: cover,
+      }"
+      style="position:relative"
+      class="background"
+    >
       <svg
         style="position: sticky; top: 94px"
         xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +19,7 @@
       >
         <path
           fill="#0e9246"
-          fill-opacity="1"
+          fill-opacity="0.1"
           d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
         />
       </svg>
@@ -65,8 +76,18 @@ export default {
     }
   },
   components: {
-        SliceZone
-    },
+    SliceZone
+  },
+   async asyncData({ $prismic, params, error }) {
+    try{
+      const page = (await $prismic.api.getByUID('page', 'piante')).data      
+      return {
+        document: page,
+      }
+    } catch (e) {
+      error({ statusCode: 404, message: 'Page not found' })
+    }
+   }
    
   
 }
@@ -97,6 +118,12 @@ svg {
   overflow: hidden;
   position: relative;
 }
-
-
+.background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-blend-mode: overlay;
+}
 </style>
