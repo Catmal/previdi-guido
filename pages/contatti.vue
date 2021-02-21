@@ -105,11 +105,10 @@
                       <h5>Dichiaro di aver preso visione della informativa privacy e, autorizzo il trattamento dei miei dati personali, in relazione a quanto ivi indicato. Leggi Informativa *</h5>
                     </b-checkbox>
                   </b-field>
-                  <b-button
+                  <button
                     type="submit"
-                    expanded
                     class="has-background-primary p-4 has-text-white rounded-borders"
-                  >Invia</b-button>
+                  >Invia</button>
                 </form>
               </section>
             </div>
