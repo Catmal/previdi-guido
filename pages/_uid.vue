@@ -12,20 +12,18 @@
       class="background"
       style="position:relative"
     >
-      <transition name="bkg">
-        <svg
-          v-if="show"
-          style="position: sticky; top: 94px"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 200"
-        >
-          <path
-            fill="#0e9246"
-            fill-opacity="0.1"
-            d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-          />
-        </svg>
-      </transition>
+      <svg
+        v-if="show"
+        style="position: sticky; top: 94px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 200"
+      >
+        <path
+          fill="#0e9246"
+          fill-opacity="0.1"
+          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+        />
+      </svg>
 
       <div style=" margin-top:-28%; padding: 15px">
         <div class="container">

@@ -1,0 +1,32 @@
+{
+  "id": "before_after",
+  "type": "SharedSlice",
+  "name": "BeforeAfter",
+  "description": "BeforeAfter",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BeforeAfter",
+      "primary": {},
+      "items": {
+        "image": {
+          "config": {
+            "label": "",
+            "constraint": {},
+            "thumbnails": [
+              {
+                "name": "thumb_400_350",
+                "width": 400,
+                "height": 350
+              }
+            ]
+          },
+          "type": "Image"
+        }
+      }
+    }
+  ]
+}
