@@ -19,22 +19,22 @@
           <h1 class="has-text-white pt-6">CONTATTI</h1>
           <div class="center has-text-white">
             <div>
-              <h5>
+              <h4>
                 <b-icon icon="phone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>UFFICIO
-              </h5>
+              </h4>
               <h3>0535 97277</h3>
             </div>
             <div>
               <h5 class="has-text-centered">
                 <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>GUIDO
               </h5>
-              <h3>348 0736481</h3>
+              <h4>348 0736481</h4>
             </div>
             <div>
               <h5 class="has-text-right">
                 <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>MATTEO
               </h5>
-              <h3>388 6351793</h3>
+              <h4>388 6351793</h4>
             </div>
           </div>
           <hr />
