@@ -62,6 +62,7 @@ export default {
   buildModules: [],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
+    '@nuxtjs/sitemap',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/style-resources',
     'nuxt-buefy', ["@nuxtjs/prismic", {
