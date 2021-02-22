@@ -38,7 +38,7 @@ export default {
       crossorigin: true
     },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Benne:300,400,500,600,700", },
-  { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=BenchNine:300,500,700", }],
+    { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=BenchNine:300,500,700", }],
     script: [{
       "src": "https://cdn.polyfill.io/v2/polyfill.min.js?features=Element.prototype.classList"
     }, {
@@ -71,6 +71,26 @@ export default {
   styleResources: {
     scss: [
       '~/assets/scss/main.scss',
+    ]
+  },
+  sitemap: {
+    hostname: 'https://previdiguido.it',
+    gzip: true,
+    exclude: [
+      '/thanks',
+
+    ],
+    routes: [
+      '/page/azienda',
+      '/page/piante',
+      '/page/contatti',
+      '/page/lavori',
+      {
+        url: '/page/3',
+        changefreq: 'daily',
+        priority: 1,
+        lastmod: '2017-06-30T13:30:00.000Z'
+      }
     ]
   },
   build: {
