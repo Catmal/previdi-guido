@@ -56,6 +56,7 @@ export default {
   buildModules: [],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
+    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/style-resources',
     'nuxt-buefy', ["@nuxtjs/prismic", {
       "endpoint": "https://vivai-previdi.cdn.prismic.io/api/v2",
