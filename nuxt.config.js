@@ -47,6 +47,9 @@ export default {
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss'],
+  router: {
+    trailingSlash: true,
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -76,6 +79,7 @@ export default {
   },
   sitemap: {
     hostname: 'https://previdiguido.it',
+    trailingSlash: true,
     gzip: true,
     exclude: [
       '/thanks',
