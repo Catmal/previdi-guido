@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div :style="{ 
+    <div
+      :style="{ 
       backgroundImage: 'url(' + document.background_image.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
       backgroundBlendMode: overlay,
       backgroundAttachment: fixed,
@@ -9,20 +10,23 @@
       backgroundSize: cover,
      
 
-      }" class="background" style="position:relative">
+      }"
+      class="background"
+      style="position:relative"
+    >
       <transition name="bkg">
-      <svg
-        v-if="show"
-        style="position: sticky; top: 94px"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 200"
-      >
-        <path
-          fill="#0e9246"
-          fill-opacity="0"
-          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-        />
-      </svg>
+        <svg
+          v-if="show"
+          style="position: sticky; top: 94px"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 200"
+        >
+          <path
+            fill="#0e9246"
+            fill-opacity="0"
+            d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+          />
+        </svg>
       </transition>
       <div style=" margin-top:-28%">
         <div class="container p-4">
@@ -50,9 +54,9 @@ export default {
   transition: 'home',
   head () {
     return {
-      title: this.document.title[0].text,
+      title: this.document.data.meta_title,
       meta: [
-        { hid: 'og-title', property: 'og:title', content: "kk" },
+        { hid: 'og-title', property: 'og:title', content: document.data.meta_description },
         // other meta
       ]
     }
@@ -103,17 +107,15 @@ export default {
 >>> h2 {
   margin-bottom: 40px !important;
   color: #0e9246;
-  font-weight: 700!important;
+  font-weight: 700 !important;
 }
 >>> h3 {
   margin-top: 2rem !important;
   margin-bottom: 40px !important;
   color: #0e9246;
-  
 }
 >>> h4 {
   margin-bottom: 4rem !important;
-  
 }
 >>> ul {
   background: #dee5e5;
@@ -132,6 +134,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-      background-blend-mode: overlay;
+  background-blend-mode: overlay;
 }
 </style>

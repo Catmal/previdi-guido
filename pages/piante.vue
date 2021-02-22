@@ -57,14 +57,14 @@ import SliceZone from 'vue-slicezone'
 
 export default {
  head: {
-    title: 'Vivai Previdi Guido - Vendita Piante',
+    title: 'Vendita Piante | Vivai Previdi Guido',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: ''
+        content: 'Vendita piante con ampia scelta di alberature, arbusti, conifere, piante da frutto, mediterranee.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

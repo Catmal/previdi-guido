@@ -1,6 +1,6 @@
 <template>
-  <section >
-    <slice-zone  type="home_page" queryType="single" />
+  <section>
+    <slice-zone type="home_page" queryType="single" />
     <div class="has-background-primary p-3 pb-6">
       <section class="container">
         <h2 class="has-text-white has-text-centered my-6">SERVIZI</h2>
@@ -20,7 +20,7 @@
                 class="p-4 rounded-borders"
                 style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
               >
-                <h5 class="is-uppercase" >{{service.data.title[0].text}}</h5>
+                <h5 class="is-uppercase">{{service.data.title[0].text}}</h5>
               </div>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'my website description'
+        content: 'Vivai piante e azienda agricola a Massa Finalese, Modena. Vendita piante, progettazione e realizzazione verde pubblico e privato, realizzazione di prati, potature aeree, impianti di irrigazione.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -78,6 +78,6 @@ export default {
 </script>
 <style scoped>
 .hero {
-  height: 100vh!important;
+  height: 100vh !important;
 }
 </style>
