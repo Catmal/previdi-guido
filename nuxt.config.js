@@ -86,12 +86,15 @@ export default {
       '/page/piante',
       '/page/contatti',
       '/page/lavori',
-      {
-        url: '/page/3',
-        changefreq: 'daily',
-        priority: 1,
-        lastmod: '2017-06-30T13:30:00.000Z'
-      }
+      '/servizi/aiuole',
+      '/servizi/prati',
+      '/servizi/parchi-e-giardini',
+      '/servizi/impianti-irrigazione',
+      '/servizi/potatura-aerea',
+      '/servizi/allestimenti-eventi',
+      '/servizi/trattamenti-fitosanitari',
+      '/servizi/endoterapia',
+
     ]
   },
   build: {
