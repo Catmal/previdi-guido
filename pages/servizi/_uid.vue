@@ -54,9 +54,9 @@ export default {
   transition: 'home',
   head () {
     return {
-      title: this.document.data.meta_title,
+      title: this.document.meta_title,
       meta: [
-        { hid: 'og-title', property: 'og:title', content: document.data.meta_description },
+        { hid: 'og-title', property: 'og:title', content: document.meta_description },
         // other meta
       ]
     }

@@ -90,10 +90,8 @@ export default {
 
     ],
     routes: [
-      '/page/azienda',
-      '/page/piante',
-      '/page/contatti',
-      '/page/lavori',
+      '/azienda',
+      '/lavori',
       '/servizi/aiuole',
       '/servizi/prati',
       '/servizi/parchi-e-giardini',
@@ -102,6 +100,8 @@ export default {
       '/servizi/allestimenti-eventi',
       '/servizi/trattamenti-fitosanitari',
       '/servizi/endoterapia',
+      '/servizi/lavori-vari',
+
 
     ]
   },
