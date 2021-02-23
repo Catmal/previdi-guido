@@ -67,7 +67,8 @@ export default {
       'components/**/*.vue',
       'layouts/**/*.vue',
       'pages/**/*.vue',
-      'plugins/**/*.js'
+      'plugins/**/*.js',
+      'slices/**/*.js'
     ],
     styleExtensions: ['.css'],
     whitelist: ['body', 'html', 'nuxt-progress', 'b-modal', 'b-carousel', 'column', 'b-input'],
