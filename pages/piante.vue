@@ -10,7 +10,7 @@
       <div class="container p-6">
         <h1>Piante</h1>
         <div class="card" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
-          <b-tabs type="is-boxed" v-model="activeTab">
+          <b-tabs v-model="activeTab">
             <b-tab-item label="Alberature">
               <slice-zone type="piante" uid="alberature" />
             </b-tab-item>
@@ -69,7 +69,5 @@ export default {
       error({ statusCode: 404, message: 'Page not found' })
     }
    }
-   
-  
 }
 </script>

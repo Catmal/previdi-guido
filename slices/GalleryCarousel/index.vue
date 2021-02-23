@@ -35,23 +35,23 @@
       >
         <div style="position: relative">
           <b-skeleton v-if="!slice" width="400px" height="350px"></b-skeleton>
-          <img
+          <b-image
             height="350px"
             width="400px"
             v-if="item.firstImage.thumbb"
-            class="rounded-borders"
-            @click="currentImage = item, isImageModalActive = true"
+            class="rounded-borders-bottom"
+            @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.thumbb.url"
           />
-          <img
+          <b-image
             v-else
             class="rounded-borders"
-            @click="currentImage = item, isImageModalActive = true"
+            @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.url"
           />
           <div
             class="p-4 rounded-borders-bottom"
-            style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
+            style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
             <h5>{{item.firstImage.alt}}</h5>
           </div>

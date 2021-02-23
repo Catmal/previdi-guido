@@ -24,23 +24,25 @@
         class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="width: 400px; height:350px; background: #000" v-if="!item.image"></div>
-        <b-skeleton v-if="!slice.items" width="400px" height="350px"></b-skeleton>
         <div style="position: relative">
-          <img
+          <b-image
+            lazy
             width="400"
             height="350"
             class="rounded-borders"
             v-if="item.image.thumb_400_350"
-            @click="currentImage = item, isImageModalActive = true"
+            @click.native="currentImage = item, isImageModalActive = true"
             :src="item.image.thumb_400_350.url"
           />
+          <b-skeleton v-if="!item.image" width="400px" height="350px"></b-skeleton>
 
-          <img
+          <b-image
+            lazy
             width="400"
             height="350"
             v-if="!item.image.thumb_400_350 && item.image.thumb"
             class="rounded-borders"
-            @click="currentImage = item, isImageModalActive = true"
+            @click.native="currentImage = item, isImageModalActive = true"
             :src="item.image.thumb.url"
           />
           <div
