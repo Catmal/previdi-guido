@@ -11,7 +11,7 @@ export default {
     },
     link: [{
       rel: 'icon',
-      type: 'image/x-icon',
+      type: 'image/png',
       href: '/favicon.png'
     },
     {
@@ -24,11 +24,11 @@ export default {
       href: "https://vivai-previdi.prismic.io",
       crossorigin: true
     },
-    {
-      rel: "preconnect",
-      href: "https://cdn.materialdesignicons.com",
-      crossorigin: true
-    },
+    // {
+    //   rel: "preconnect",
+    //   href: "https://cdn.materialdesignicons.com",
+    //   crossorigin: true
+    // },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Benne:300,400,500,600,700", },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=BenchNine:300,500,700", }],
     script: [{
@@ -54,7 +54,6 @@ export default {
 
     '@nuxtjs/sitemap',
     '@aceforth/nuxt-optimized-images',
-    '@nuxtjs/style-resources',
     'nuxt-buefy', ["@nuxtjs/prismic", {
       "endpoint": "https://vivai-previdi.cdn.prismic.io/api/v2",
       "apiOptions": {
@@ -65,12 +64,6 @@ export default {
         ]
       }
     }], ["nuxt-sm"]],
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  styleResources: {
-    scss: [
-      '~/assets/scss/main.scss',
-    ]
-  },
   purgeCSS: {
     enabled: true,
     // enabled: ({ isDev, isClient }) => (!isDev && isClient), 

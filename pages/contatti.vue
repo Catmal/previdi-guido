@@ -143,7 +143,7 @@
 export default {
     transition: 'home',
     head: {
-    title: 'Vivai Previdi Guido - Contatti',
+    title: 'Contatti | VIVAI PREVIDI GUIDO',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -179,20 +179,6 @@ export default {
 }
 </script>
 <style  scoped>
-.form.h3 {
-  margin-bottom: 2rem;
-}
-
-.background {
-  background-image: url("/vivai-previdi-guido.jpg"),
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  background-blend-mode: overlay;
-}
 .center {
   display: flex;
   align-items: center;
