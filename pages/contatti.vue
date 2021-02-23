@@ -11,21 +11,15 @@
         <h1 class="has-text-white pt-6">CONTATTI</h1>
         <div class="center has-text-white">
           <div>
-            <h3>
-              <b-icon icon="phone" class="mr-4 my-4"></b-icon>UFFICIO
-            </h3>
+            <h3>UFFICIO</h3>
             <h4 class="is-size-2 mt-4">0535 97277</h4>
           </div>
           <div>
-            <h3 class="has-text-centered">
-              <b-icon icon="cellphone" class="mr-4 my-4"></b-icon>GUIDO
-            </h3>
+            <h3 class="has-text-centered">GUIDO</h3>
             <h4 class="is-size-2 mt-4">348 0736481</h4>
           </div>
           <div>
-            <h3 class="has-text-right">
-              <b-icon icon="cellphone" class="mr-4 my-4"></b-icon>MATTEO
-            </h3>
+            <h3 class="has-text-right">MATTEO</h3>
             <h4 class="is-size-2 mt-4">388 6351793</h4>
           </div>
         </div>
@@ -63,9 +57,6 @@
                     required
                     placeholder="Email*"
                     type="email"
-                    icon="email"
-                    icon-right="close-circle"
-                    icon-right-clickable
                     name="email"
                     validation-message="Inserisci un indirizzo email valido"
                     v-model="submission.email"
@@ -76,9 +67,6 @@
                   <b-input
                     placeholder="Telefono"
                     type="phone"
-                    icon="phone"
-                    icon-right="close-circle"
-                    icon-right-clickable
                     name="phone"
                     v-model="submission.phone"
                     @icon-right-click="submission.phone = ''"
@@ -90,8 +78,6 @@
                     validation-message="Campo messaggio obbligatorio"
                     placeholder="Messaggio"
                     type="textarea"
-                    icon-right="close-circle"
-                    icon-right-clickable
                     name="message"
                     v-model="submission.message"
                     @icon-right-click="submission.message = ''"

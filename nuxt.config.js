@@ -104,6 +104,7 @@ export default {
     ]
   },
   build: {
+    analyze: true,
     standalone: true,
     transpile: ["vue-slicezone", "nuxt-sm"],
     extractCSS: true
