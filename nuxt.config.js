@@ -6,20 +6,10 @@ export default {
     fallback: true
   },
   head: {
-    title: 'vivai-previdi',
+    title: 'VIVAI  PREVIDI GUIDO',
     htmlAttrs: {
       lang: 'en'
     },
-    meta: [{
-      charset: 'utf-8'
-    }, {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1'
-    }, {
-      hid: 'description',
-      name: 'description',
-      content: ''
-    }],
     link: [{
       rel: 'icon',
       type: 'image/x-icon',
@@ -59,10 +49,10 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['nuxt-purgecss'],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
-    'nuxt-purgecss',
+
     '@nuxtjs/sitemap',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/style-resources',
@@ -80,6 +70,40 @@ export default {
   styleResources: {
     scss: [
       '~/assets/scss/main.scss',
+    ]
+  },
+  purgeCSS: {
+    enabled: true,
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      './node_modules/vuetify/dist/vuetify.js'
+    ],
+    styleExtensions: ['.css'],
+    // whitelist: ['body', 'html', 'nuxt-progress', ''],
+
+    whitelist: ['v-application', 'v-application--wrap', 'layout', 'row', 'col'],
+    whitelistPatterns: [
+      /^v-((?!application).)*$/,
+      /^theme--*/,
+      /.*-transition/,
+      /^justify-*/,
+      /^p*-[0-9]/,
+      /^m*-[0-9]/,
+      /^text--*/,
+      /--text$/,
+      /^row-*/,
+      /^col-*/
+    ],
+    whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/],
+
+    extractors: [
+      {
+        extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
+        extensions: ['html', 'vue', 'js']
+      }
     ]
   },
   sitemap: {
