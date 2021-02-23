@@ -2,9 +2,7 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
-  generate: {
-    fallback: true
-  },
+
   head: {
     title: 'VIVAI  PREVIDI GUIDO',
     htmlAttrs: {
@@ -41,7 +39,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss'],
   router: {
-    trailingSlash: true,
+    trailingSlash: false,
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -74,31 +72,16 @@ export default {
   },
   purgeCSS: {
     enabled: true,
+    // enabled: ({ isDev, isClient }) => (!isDev && isClient), 
     paths: [
       'components/**/*.vue',
       'layouts/**/*.vue',
       'pages/**/*.vue',
-      'plugins/**/*.js',
-      './node_modules/vuetify/dist/vuetify.js'
+      'plugins/**/*.js'
     ],
     styleExtensions: ['.css'],
-    // whitelist: ['body', 'html', 'nuxt-progress', ''],
-
-    whitelist: ['v-application', 'v-application--wrap', 'layout', 'row', 'col'],
-    whitelistPatterns: [
-      /^v-((?!application).)*$/,
-      /^theme--*/,
-      /.*-transition/,
-      /^justify-*/,
-      /^p*-[0-9]/,
-      /^m*-[0-9]/,
-      /^text--*/,
-      /--text$/,
-      /^row-*/,
-      /^col-*/
-    ],
-    whitelistPatternsChildren: [/^v-((?!application).)*$/, /^theme--*/],
-
+    whitelist: ['body', 'html', 'nuxt-progress', 'b-modal', 'b-carousel', 'column', 'b-input'],
+    whitelistPatterns: [/(nav).*/, /(input).*/, /(is)-*/, /(has)-*/, /(b-tab)*/, /(b-field)*/, /(b-input)*/],
     extractors: [
       {
         extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
@@ -108,24 +91,23 @@ export default {
   },
   sitemap: {
     hostname: 'https://previdiguido.it',
-    trailingSlash: true,
     gzip: true,
     exclude: [
       '/thanks',
 
     ],
     routes: [
-      '/azienda/',
+      '/azienda',
       '/lavori/',
-      '/servizi/aiuole/',
-      '/servizi/prati/',
-      '/servizi/parchi-e-giardini/',
-      '/servizi/impianti-irrigazione/',
-      '/servizi/potatura-aerea/',
-      '/servizi/allestimenti-eventi/',
-      '/servizi/trattamenti-fitosanitari/',
-      '/servizi/endoterapia/',
-      '/servizi/lavori-vari/',
+      '/servizi/aiuole',
+      '/servizi/prati',
+      '/servizi/parchi-e-giardini',
+      '/servizi/impianti-irrigazione',
+      '/servizi/potatura-aerea',
+      '/servizi/allestimenti-eventi',
+      '/servizi/trattamenti-fitosanitari',
+      '/servizi/endoterapia',
+      '/servizi/lavori-vari',
 
 
     ]

@@ -3,13 +3,6 @@
     <div
       :style="{ 
       backgroundImage: 'url(' + document.background_image.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
-      backgroundBlendMode: overlay,
-      backgroundAttachment: fixed,
-      backgrounPosition: center,
-      backgroundRepeat: no-repeat,
-      backgroundSize: cover,
-     
-
       }"
       class="background"
       style="position:relative"

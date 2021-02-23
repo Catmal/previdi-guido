@@ -1,7 +1,7 @@
 <template>
   <section
     :style="{ backgroundImage: 'url(' + slice.primary.image.url + '), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.8))'}"
-    class="hero  is-halfheight"
+    class="hero is-halfheight"
   >
     <div class="hero-body">
       <div class="container has-text-centered">
@@ -32,8 +32,7 @@ export default {
 </script>
 
 <style scoped>
-
-
+/* purgecss start ignore */
 .hero {
   background-attachment: fixed;
   background-position: center;
@@ -41,6 +40,6 @@ export default {
   background-size: cover;
   height: 30vh;
   background-blend-mode: overlay;
-
 }
+/* purgecss end ignore */
 </style>
