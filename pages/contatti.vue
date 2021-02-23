@@ -42,12 +42,8 @@
                   <b-input
                     placeholder="Nome*"
                     type="text"
-                    icon="account"
-                    icon-right="close-circle"
-                    icon-right-clickable
                     name="name"
                     v-model="submission.name"
-                    @icon-right-click="submission.name = ''"
                     validation-message="Campo nome obbligatorio"
                     required
                   ></b-input>
@@ -83,7 +79,10 @@
                     @icon-right-click="submission.message = ''"
                   />
                 </b-field>
-                <b-field class="my-6">
+                <b-field
+                  class="my-6"
+                  validation-message="Devi accettare per poter inviare il messaggio"
+                >
                   <b-checkbox required>
                     <h5>Dichiaro di aver preso visione della informativa privacy e, autorizzo il trattamento dei miei dati personali, in relazione a quanto ivi indicato. Leggi Informativa *</h5>
                   </b-checkbox>
