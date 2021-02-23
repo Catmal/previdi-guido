@@ -36,6 +36,8 @@
         <div style="position: relative">
           <b-skeleton v-if="!slice" width="400px" height="350px"></b-skeleton>
           <img
+            height="350px"
+            width="400px"
             v-if="item.firstImage.thumbb"
             class="rounded-borders"
             @click="currentImage = item, isImageModalActive = true"

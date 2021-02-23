@@ -27,7 +27,8 @@
         <b-skeleton v-if="!slice.items" width="400px" height="350px"></b-skeleton>
         <div style="position: relative">
           <img
-            style="max-height: 350px"
+            width="400"
+            height="350"
             class="rounded-borders"
             v-if="item.image.thumb_400_350"
             @click="currentImage = item, isImageModalActive = true"
@@ -35,6 +36,8 @@
           />
 
           <img
+            width="400"
+            height="350"
             v-if="!item.image.thumb_400_350 && item.image.thumb"
             class="rounded-borders"
             @click="currentImage = item, isImageModalActive = true"
