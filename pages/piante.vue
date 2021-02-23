@@ -7,7 +7,7 @@
       style="position:relative"
       class="background py-6"
     >
-      <div class="container p-4">
+      <div class="container p-6">
         <h1>Piante</h1>
         <div class="card" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
           <b-tabs type="is-boxed" v-model="activeTab">

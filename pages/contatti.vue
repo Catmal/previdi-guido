@@ -2,31 +2,31 @@
   <div>
     <div
       :style="{ 
-      backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.4)  50%, rgba(14,146,70,0.8) )',
+      backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.4)  30%, rgba(0,0,0,0.8) )',
       }"
       class="background"
       style="position:relative"
     >
-      <div class="container p-4">
+      <div class="container p-6">
         <h1 class="has-text-white pt-6">CONTATTI</h1>
         <div class="center has-text-white">
           <div>
             <h3>
-              <b-icon icon="phone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>UFFICIO
+              <b-icon icon="phone" class="mr-4 my-4"></b-icon>UFFICIO
             </h3>
-            <h4 class="is-2">0535 97277</h4>
+            <h4 class="is-size-2 mt-4">0535 97277</h4>
           </div>
           <div>
             <h3 class="has-text-centered">
-              <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>GUIDO
+              <b-icon icon="cellphone" class="mr-4 my-4"></b-icon>GUIDO
             </h3>
-            <h4>348 0736481</h4>
+            <h4 class="is-size-2 mt-4">348 0736481</h4>
           </div>
           <div>
             <h3 class="has-text-right">
-              <b-icon icon="cellphone" size="is-small" class="mr-2 mt-4 is-primary"></b-icon>MATTEO
+              <b-icon icon="cellphone" class="mr-4 my-4"></b-icon>MATTEO
             </h3>
-            <h4>388 6351793</h4>
+            <h4 class="is-size-2 mt-4">388 6351793</h4>
           </div>
         </div>
         <hr />
@@ -178,7 +178,7 @@ export default {
 
 }
 </script>
-<style lang="scss"  scoped>
+<style  scoped>
 .form.h3 {
   margin-bottom: 2rem;
 }

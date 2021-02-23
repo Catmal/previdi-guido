@@ -7,7 +7,7 @@
       class="background py-6"
       style="position:relative"
     >
-      <div class="container p-4">
+      <div class="container p-6">
         <prismic-rich-text :field="document.title" />
         <div class="card pt-6 mb-6" style="min-height: 100vh; background: rgba(255,255,255,0.85)">
           <div
