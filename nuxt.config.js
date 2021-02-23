@@ -4,7 +4,6 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   generate: {
     fallback: '404.html',
-    routes: ['/servizi/aiuole', '/servizi/prati', '/servizi/parchi-e-giardini']
   },
   head: {
     htmlAttrs: {
