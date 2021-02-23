@@ -56,7 +56,7 @@ export default {
     return {
       title: this.document.meta_title,
       meta: [
-        { hid: 'og-title', property: 'og:title', content: document.meta_description },
+        { hid: this.document.meta_title, property: 'og:title', content: document.meta_description },
         // other meta
       ]
     }

@@ -62,6 +62,7 @@ export default {
   buildModules: [],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [// https://go.nuxtjs.dev/buefy
+    'nuxt-purgecss',
     '@nuxtjs/sitemap',
     '@aceforth/nuxt-optimized-images',
     '@nuxtjs/style-resources',
@@ -90,17 +91,17 @@ export default {
 
     ],
     routes: [
-      '/azienda',
-      '/lavori',
-      '/servizi/aiuole',
-      '/servizi/prati',
-      '/servizi/parchi-e-giardini',
-      '/servizi/impianti-irrigazione',
-      '/servizi/potatura-aerea',
-      '/servizi/allestimenti-eventi',
-      '/servizi/trattamenti-fitosanitari',
-      '/servizi/endoterapia',
-      '/servizi/lavori-vari',
+      '/azienda/',
+      '/lavori/',
+      '/servizi/aiuole/',
+      '/servizi/prati/',
+      '/servizi/parchi-e-giardini/',
+      '/servizi/impianti-irrigazione/',
+      '/servizi/potatura-aerea/',
+      '/servizi/allestimenti-eventi/',
+      '/servizi/trattamenti-fitosanitari/',
+      '/servizi/endoterapia/',
+      '/servizi/lavori-vari/',
 
 
     ]
