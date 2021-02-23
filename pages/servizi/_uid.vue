@@ -46,14 +46,14 @@ import SliceZone from 'vue-slicezone'
 export default {
   transition: 'home',
   head () {
-    return {
-      title: this.document.meta_title,
-      meta: [
-        { hid: this.document.meta_title, property: 'og:title', content: document.meta_description },
-        // other meta
-      ]
-    }
-  },
+      return {
+        title: this.document.meta_title,
+        meta: [
+          { hid: 'og-title', property: 'og:title', content: this.document.meta_description },
+          // other meta
+        ]
+      }
+    },
   mounted() {
     this.show = true
   },
@@ -62,28 +62,24 @@ export default {
       show: false
     }
   },
-    components: {
-        SliceZone
-    },
-    async asyncData({ $prismic, params, error }) {
+  components: {
+    SliceZone
+  },
+  async asyncData({ $prismic, params, error }) {
     try{
       // Query to get post content
       const page = (await $prismic.api.getByUID('service', params.uid)).data
-      const services = await $prismic.api.query(
-        $prismic.predicates.at("document.type", "service"),
-        { orderings : '[my.service.date desc]' }
-      )
-
+      
       // Returns data to be used in template
       return {
         document: page,
-        services: services.results,
       }
     } catch (e) {
       // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
+   
 }
 </script>
 

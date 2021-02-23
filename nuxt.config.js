@@ -2,9 +2,11 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
-
+  generate: {
+    fallback: '404.html',
+    routes: ['/servizi/aiuole', '/servizi/prati', '/servizi/parchi-e-giardini']
+  },
   head: {
-    title: 'VIVAI  PREVIDI GUIDO',
     htmlAttrs: {
       lang: 'en'
     },

@@ -54,15 +54,15 @@ export default {
     mounted() {
       this.show = true
     },
-     head () {
-    return {
-      title: this.document.title[0].text,
-      meta: [
-        { hid: 'og-title', property: 'og:title', content: "kk" },
-        // other meta
-      ]
-    }
-  },
+    head () {
+      return {
+        title: this.document.meta_title,
+        meta: [
+          { hid: 'og-title', property: 'og:title', content: this.document.meta_description },
+          // other meta
+        ]
+      }
+    },
     async asyncData({ $prismic, params, error }) {
     try{
       const page = (await $prismic.api.getByUID('page', params.uid)).data
