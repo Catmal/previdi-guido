@@ -26,15 +26,13 @@
         <div style="width: 400px; height:350px; background: #000" v-if="!item.image"></div>
         <div style="position: relative">
           <b-image
-            lazy
-            width="400"
-            height="350"
             class="rounded-borders"
             v-if="item.image.thumb_400_350"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.image.thumb_400_350.url"
-          />
-          <b-skeleton v-if="!item.image" width="400px" height="350px"></b-skeleton>
+          >
+            <b-skeleton slot="placeholder" :rounded="false" height="100%"></b-skeleton>
+          </b-image>
 
           <b-image
             lazy
