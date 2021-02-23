@@ -5,42 +5,28 @@
       backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
       }"
       style="position:relative"
-      class="background"
+      class="background py-6"
     >
-      <svg
-        style="position: sticky; top: 94px"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 200"
-      >
-        <path
-          fill="#0e9246"
-          fill-opacity="0.1"
-          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-        />
-      </svg>
-
-      <div style=" margin-top:-28%; padding: 15px">
-        <div class="container">
-          <h1>Piante</h1>
-          <div class="card p-6" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
-            <b-tabs type="is-boxed" v-model="activeTab">
-              <b-tab-item label="Alberature">
-                <slice-zone type="piante" uid="alberature" />
-              </b-tab-item>
-              <b-tab-item label="Arbusti">
-                <slice-zone type="piante" uid="arbusti" />
-              </b-tab-item>
-              <b-tab-item label="Conifere">
-                <slice-zone type="piante" uid="conifere" />
-              </b-tab-item>
-              <b-tab-item label="Frutti">
-                <slice-zone type="piante" uid="frutti" />
-              </b-tab-item>
-              <b-tab-item label="Mediterranee">
-                <slice-zone type="piante" uid="mediterranee" />
-              </b-tab-item>
-            </b-tabs>
-          </div>
+      <div class="container p-4">
+        <h1>Piante</h1>
+        <div class="card" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
+          <b-tabs type="is-boxed" v-model="activeTab">
+            <b-tab-item label="Alberature">
+              <slice-zone type="piante" uid="alberature" />
+            </b-tab-item>
+            <b-tab-item label="Arbusti">
+              <slice-zone type="piante" uid="arbusti" />
+            </b-tab-item>
+            <b-tab-item label="Conifere">
+              <slice-zone type="piante" uid="conifere" />
+            </b-tab-item>
+            <b-tab-item label="Frutti">
+              <slice-zone type="piante" uid="frutti" />
+            </b-tab-item>
+            <b-tab-item label="Mediterranee">
+              <slice-zone type="piante" uid="mediterranee" />
+            </b-tab-item>
+          </b-tabs>
         </div>
       </div>
     </div>

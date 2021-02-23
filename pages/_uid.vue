@@ -4,33 +4,18 @@
       :style="{ 
       backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.6)  20%, rgba(14,146,70,0.2) )',
       }"
-      class="background"
+      class="background py-6"
       style="position:relative"
     >
-      <svg
-        v-if="show"
-        style="position: sticky; top: 94px"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 200"
-      >
-        <path
-          fill="#0e9246"
-          fill-opacity="0.1"
-          d="M0,192L80,170.7C160,149,320,107,480,122.7C640,139,800,213,960,224C1120,235,1280,181,1360,154.7L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-        />
-      </svg>
-
-      <div style=" margin-top:-28%; padding: 15px">
-        <div class="container">
-          <prismic-rich-text :field="document.title" />
-          <div class="card p-6" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
-            <div v-if="document.content.length > 0 && document.content[0].text !== ''">
-              <div class="card-content">
-                <prismic-rich-text :field="document.content" />
-              </div>
+      <div class="container p-4">
+        <prismic-rich-text :field="document.title" />
+        <div class="card" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
+          <div v-if="document.content.length > 0 && document.content[0].text !== ''">
+            <div class="card-content">
+              <prismic-rich-text :field="document.content" />
             </div>
-            <slice-zone type="page" :uid="$route.params.uid" />
           </div>
+          <slice-zone type="page" :uid="$route.params.uid" />
         </div>
       </div>
     </div>
