@@ -38,32 +38,19 @@ export default {
         ]
       }
     },
-  mounted() {
-    this.show = true
-  },
-  data () {
-    return {
-      show: false
-    }
-  },
   components: {
     SliceZone
   },
   async asyncData({ $prismic, params, error }) {
     try{
-      // Query to get post content
       const page = (await $prismic.api.getByUID('service', params.uid)).data
-      
-      // Returns data to be used in template
       return {
         document: page,
       }
     } catch (e) {
-      // Returns error page
       error({ statusCode: 404, message: 'Page not found' })
     }
   },
-   
 }
 </script>
 

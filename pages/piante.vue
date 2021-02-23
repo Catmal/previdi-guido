@@ -73,38 +73,3 @@ export default {
   
 }
 </script>
-
-<style lang="scss"  scoped>
-.home-enter-active,
-.home-leave-active {
-  transition: opacity 0.5s;
-}
-.home-enter,
-.home-leave-active {
-  opacity: 0;
-}
-
-svg {
-  display: inline-block;
-  position: sticky;
-  top: 0;
-}
-@media only screen and (max-width: 600px) {
-  svg {
-    top: 0;
-  }
-}
-.cont {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.background {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
-  background-blend-mode: overlay;
-}
-</style>

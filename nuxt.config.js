@@ -35,6 +35,9 @@ export default {
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss', "@mdi/font/css/materialdesignicons.css"],
+  buefy: {
+    materialDesignIcons: false,
+  },
   router: {
     trailingSlash: false,
   },

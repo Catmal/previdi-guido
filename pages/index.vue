@@ -34,7 +34,6 @@
 
 <script>
 import SliceZone from 'vue-slicezone'
-
 export default {
   name: 'HomePage',
   head: {

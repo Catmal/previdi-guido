@@ -24,20 +24,10 @@
 
 <script>
 import SliceZone from 'vue-slicezone'
-
 export default {
-  
   transition: 'home',
     components: {
         SliceZone
-    },
-    data () {
-      return {
-        show: false
-      }
-    },
-    mounted() {
-      this.show = true
     },
     head () {
       return {

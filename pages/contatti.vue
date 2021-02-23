@@ -4,11 +4,11 @@
       :style="{ 
       backgroundImage: 'url(' + document.background.url + '), linear-gradient(rgba(0,0,0,0.4)  30%, rgba(0,0,0,0.8) )',
       }"
-      class="background"
+      class="background py-6"
       style="position:relative"
     >
       <div class="container p-6">
-        <h1 class="has-text-white pt-6">CONTATTI</h1>
+        <h1 class="has-text-white">CONTATTI</h1>
         <div class="center has-text-white">
           <div>
             <h3>UFFICIO</h3>
