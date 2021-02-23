@@ -24,11 +24,7 @@ export default {
       href: "https://vivai-previdi.prismic.io",
       crossorigin: true
     },
-    // {
-    //   rel: "preconnect",
-    //   href: "https://cdn.materialdesignicons.com",
-    //   crossorigin: true
-    // },
+
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Benne:300,400,500,600,700", },
     { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=BenchNine:300,500,700", }],
     script: [{
@@ -38,7 +34,7 @@ export default {
     }]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss'],
+  css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss', "@mdi/font/css/materialdesignicons.css"],
   router: {
     trailingSlash: false,
   },

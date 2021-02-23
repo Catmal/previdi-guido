@@ -13,6 +13,7 @@
     "build-storybook": "nuxt storybook build"
   },
   "dependencies": {
+    "@mdi/font": "^5.9.55",
     "@nuxtjs/prismic": "^1.2.4",
     "@nuxtjs/sitemap": "^2.4.0",
     "@prismicio/vue": "^2.0.7",
