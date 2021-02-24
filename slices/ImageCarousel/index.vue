@@ -45,4 +45,10 @@ export default {
   right: 0;
 }
 /* purgecss end ignore */
+
+.b-skeleton {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
 </style>

@@ -53,7 +53,7 @@ export default {
 
     '@nuxtjs/sitemap',
     '@aceforth/nuxt-optimized-images',
-    'nuxt-buefy', ["@nuxtjs/prismic", {
+    ['nuxt-buefy', { css: false, materialDesignIcons: false }], ["@nuxtjs/prismic", {
       "endpoint": "https://vivai-previdi.cdn.prismic.io/api/v2",
       "apiOptions": {
         "routes": [{

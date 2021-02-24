@@ -34,7 +34,6 @@
         class="column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-quarter-fullhd is-clickable"
       >
         <div style="position: relative">
-          <b-skeleton v-if="!slice" width="400px" height="350px"></b-skeleton>
           <b-image
             height="350px"
             width="400px"
@@ -42,18 +41,28 @@
             class="rounded-borders-bottom"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.thumbb.url"
+            webp-fallback=".jpg"
           >
-            <b-skeleton slot="placeholder" :rounded="false" height="350px" width="400px"></b-skeleton>
+            <template #placeholder>
+              <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
+            </template>
           </b-image>
           <b-image
             v-else
+            height="350px"
+            width="400px"
+            webp-fallback=".jpg"
             class="rounded-borders"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.url"
-          />
+          >
+            <template #placeholder>
+              <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
+            </template>
+          </b-image>
           <div
             class="p-4 rounded-borders-bottom"
-            style="position: absolute; bottom: 0; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
+            style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; background: rgba(255,255,255,0.95)"
           >
             <h5>{{item.firstImage.alt}}</h5>
           </div>

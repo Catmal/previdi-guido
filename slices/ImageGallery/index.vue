@@ -25,6 +25,8 @@
       >
         <div style="position: relative">
           <b-image
+            loading="lazy"
+            webp-fallback=".jpg"
             class="rounded-borders"
             v-if="item.image.thumb_400_350"
             @click.native="currentImage = item, isImageModalActive = true"
@@ -32,10 +34,13 @@
             width="400px"
             height="350px"
           >
-            <b-skeleton slot="placeholder" :rounded="false" width="400px" height="350px"></b-skeleton>
+            <template #placeholder>
+              <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
+            </template>
           </b-image>
 
           <b-image
+            webp-fallback=".jpg"
             lazy
             width="400"
             height="350"
