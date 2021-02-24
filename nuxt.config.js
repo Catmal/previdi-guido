@@ -39,7 +39,7 @@ export default {
     materialDesignIcons: false,
   },
   router: {
-    trailingSlash: false,
+    middleware: 'trailingSlashRedirect',
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
