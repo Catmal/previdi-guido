@@ -40,8 +40,6 @@
           </b-image>
 
           <b-image
-            webp-fallback=".jpg"
-            lazy
             width="400"
             height="350"
             v-if="!item.image.thumb_400_350 && item.image.thumb"

@@ -27,7 +27,6 @@
         </div>
       </section>
     </div>
-
     <slice-zone type="page" uid="home" />
   </section>
 </template>

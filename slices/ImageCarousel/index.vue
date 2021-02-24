@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="scss"  scoped>
+<style   scoped>
 /* purgecss start ignore */
 
 .home-slider {
