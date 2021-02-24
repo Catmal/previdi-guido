@@ -34,14 +34,10 @@ export default {
     }]
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss', "@mdi/font/css/materialdesignicons.css"],
+  css: ["vue-essential-slices/src/styles/styles.scss", '~/assets/css/style.css', '~/assets/scss/main.scss'],
   buefy: {
     materialDesignIcons: false,
   },
-  router: {
-    middleware: 'trailingSlashRedirect',
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -92,7 +88,7 @@ export default {
     ],
     routes: [
       '/azienda',
-      '/lavori/',
+      '/lavori',
       '/servizi/aiuole',
       '/servizi/prati',
       '/servizi/parchi-e-giardini',
