@@ -4,13 +4,13 @@ import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch,
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '../node_modules/buefy/dist/buefy.css'
-
 import '../node_modules/vue-essential-slices/src/styles/styles.scss'
 
 import '../assets/css/style.css'
 
 import '../assets/scss/main.scss'
+
+import '../node_modules/@mdi/font/css/materialdesignicons.css'
 
 import _6f6c098b from '../layouts/default.vue'
 

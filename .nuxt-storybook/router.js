@@ -35,26 +35,32 @@ export const routerOptions = {
   }, {
     path: "/contatti",
     component: _700c38c0,
+    pathToRegexpOptions: {"strict":true},
     name: "contatti"
   }, {
     path: "/piante",
     component: _05506d5d,
+    pathToRegexpOptions: {"strict":true},
     name: "piante"
   }, {
     path: "/thanks",
     component: _339b6e4f,
+    pathToRegexpOptions: {"strict":true},
     name: "thanks"
   }, {
     path: "/servizi/:uid?",
     component: _39abb2f8,
+    pathToRegexpOptions: {"strict":true},
     name: "servizi-uid"
   }, {
     path: "/",
     component: _bc1f2988,
+    pathToRegexpOptions: {"strict":true},
     name: "index"
   }, {
     path: "/:uid",
     component: _7954ca97,
+    pathToRegexpOptions: {"strict":true},
     name: "uid"
   }],
 

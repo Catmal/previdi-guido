@@ -35,22 +35,21 @@
       >
         <div style="position: relative">
           <b-image
-            height="350px"
-            width="400px"
+            lazy
+            width="350px"
+            height="400px"
             v-if="item.firstImage.thumbb"
-            class="rounded-borders-bottom"
+            class="rounded-borders"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.thumbb.url"
-            webp-fallback=".jpg"
           >
             <template #placeholder>
               <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
             </template>
           </b-image>
           <b-image
-            v-else
-            height="350px"
-            width="400px"
+            width="350px"
+            v-if="!item.firstImage.thumbb"
             webp-fallback=".jpg"
             class="rounded-borders"
             @click.native="currentImage = item, isImageModalActive = true"
@@ -60,10 +59,7 @@
               <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
             </template>
           </b-image>
-          <div
-            class="p-4 rounded-borders-bottom"
-            style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; background: rgba(255,255,255,0.95)"
-          >
+          <div class="p-4 rounded-borders-bottom pic-caption">
             <h5>{{item.firstImage.alt}}</h5>
           </div>
         </div>
@@ -97,6 +93,19 @@ export default {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.pic-caption {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.95);
+}
+.b-skeleton {
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 </style>
 

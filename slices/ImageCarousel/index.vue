@@ -2,8 +2,8 @@
   <b-carousel class="home-slider" :indicator-inside="true">
     <b-carousel-item class="slide-container" v-for="(item, i) in slice.items" :key="i">
       <span>
-        <img class="slide" v-if="item.image.url" :src="item.image.url" />
-        <b-skeleton v-if="!item.image" width="400px" height="350px"></b-skeleton>
+        <img height="100vh" class="slide" v-if="item.image.url" :src="item.image.url" />
+        <b-skeleton class="slide skeleton-placeholder" height="100vh"></b-skeleton>
       </span>
     </b-carousel-item>
   </b-carousel>

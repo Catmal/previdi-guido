@@ -10,6 +10,10 @@
     "path": "/contatti",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/contatti.vue",
     "chunkName": "pages/contatti",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
+    "url": "/contatti",
     "_name": "_700c38c0"
   },
   {
@@ -17,6 +21,10 @@
     "path": "/piante",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/piante.vue",
     "chunkName": "pages/piante",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
+    "url": "/piante",
     "_name": "_05506d5d"
   },
   {
@@ -24,6 +32,10 @@
     "path": "/thanks",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/thanks.vue",
     "chunkName": "pages/thanks",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
+    "url": "/thanks",
     "_name": "_339b6e4f"
   },
   {
@@ -31,6 +43,9 @@
     "path": "/servizi/:uid?",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/servizi/_uid.vue",
     "chunkName": "pages/servizi/_uid",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
     "_name": "_39abb2f8"
   },
   {
@@ -38,6 +53,10 @@
     "path": "/",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/index.vue",
     "chunkName": "pages/index",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
+    "url": "/",
     "_name": "_bc1f2988"
   },
   {
@@ -45,6 +64,9 @@
     "path": "/:uid",
     "component": "/home/mirco/Webapps/vivai-previdi/pages/_uid.vue",
     "chunkName": "pages/_uid",
+    "pathToRegexpOptions": {
+      "strict": true
+    },
     "_name": "_7954ca97"
   }
 ]

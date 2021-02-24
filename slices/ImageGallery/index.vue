@@ -52,7 +52,7 @@
           <div
             v-if="item.image.alt && (item.image.alt.includes('prima') || item.image.alt.includes('dopo'))"
             class="p-4 rounded-borders"
-            style="position: absolute; bottom: 5px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
+            style="position: absolute; bottom: -2px; left: 0; width: 100%; background: rgba(255,255,255,0.95)"
           >
             <h5 style="text-transform: uppercase">{{item.image.alt}}</h5>
           </div>
