@@ -23,15 +23,16 @@
         :key="i"
         class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-fullhd is-clickable"
       >
-        <div style="width: 400px; height:350px; background: #000" v-if="!item.image"></div>
         <div style="position: relative">
           <b-image
             class="rounded-borders"
             v-if="item.image.thumb_400_350"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.image.thumb_400_350.url"
+            width="400px"
+            height="350px"
           >
-            <b-skeleton slot="placeholder" :rounded="false" height="100%"></b-skeleton>
+            <b-skeleton slot="placeholder" :rounded="false" width="400px" height="350px"></b-skeleton>
           </b-image>
 
           <b-image
@@ -89,5 +90,11 @@ export default {
 <style lang="scss"  scoped>
 .title {
   margin-bottom: 2em;
+}
+
+.b-skeleton {
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 </style>

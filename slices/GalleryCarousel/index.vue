@@ -42,7 +42,9 @@
             class="rounded-borders-bottom"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.firstImage.thumbb.url"
-          />
+          >
+            <b-skeleton slot="placeholder" :rounded="false" height="350px" width="400px"></b-skeleton>
+          </b-image>
           <b-image
             v-else
             class="rounded-borders"
