@@ -34,7 +34,6 @@ export default {
         title: this.document.meta_title,
         meta: [
           { hid: 'og-title', property: 'og:title', content: this.document.meta_description },
-          // other meta
         ]
       }
     },
