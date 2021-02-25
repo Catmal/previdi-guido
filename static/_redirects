@@ -1,8 +1,7 @@
 
-/piante         /servizi/piante/      301
-/lavori         /servizi/lavori/      301
+/piante         /piante/      301
+/lavori         /lavori/      301
 /contatti         /contatti/      301
-/endoterapia        /servizi/endoterapia/    301
 /servizi-2        /    301
 /vivaio        /azienda/    301
 /azienda        /azienda/    301
@@ -14,17 +13,9 @@
 /trattamenti-fitosanitari          /servizi/allestimenti-eventi/     301
 /impianti-irrigazione         /servizi/impianti-irrigazione/    301
 /potatura-aerea         /servizi/potatura-aerea/      301
+/endoterapia        /servizi/endoterapia/    301
 /parchi-e-giardini          /servizi/parchi-e-giardini/    301
 /parchi-e-giardini          /servizi/parchi-e-giardini/    301
 /lavori-vari        /servizi/lavori-vari/    301
 
 
-/servizi/aiuole /servizi/aiuole/    301
-/servizi/prati   /servizi/prati/
-/servizi/allestimenti-eventi  /servizi/allestimenti-eventi/
-/trattamenti-fitosanitari  /trattamenti-fitosanitari/
-/impianti-irrigazione  /impianti-irrigazione/
-/potatura-aerea  /potatura-aerea/
-/parchi-e-giardini /parchi-e-giardini/ 
-/lavori-vari  /lavori-vari/ 
-/endoterapia /endoterapia/
