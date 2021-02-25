@@ -102,6 +102,9 @@ export default {
 
     ]
   },
+  router: {
+    trailingSlash: true
+  },
   build: {
     analyze: true,
     standalone: true,

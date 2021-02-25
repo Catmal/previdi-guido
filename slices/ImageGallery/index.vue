@@ -33,11 +33,7 @@
             :src="item.image.thumb_400_350.url"
             width="400px"
             height="350px"
-          >
-            <template #placeholder>
-              <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
-            </template>
-          </b-image>
+          ></b-image>
 
           <b-image
             width="400"
@@ -46,7 +42,11 @@
             class="rounded-borders"
             @click.native="currentImage = item, isImageModalActive = true"
             :src="item.image.thumb.url"
-          />
+          >
+            <template #placeholder>
+              <b-skeleton class="skeleton-placeholder" height="100%"></b-skeleton>
+            </template>
+          </b-image>
           <div
             v-if="item.image.alt && (item.image.alt.includes('prima') || item.image.alt.includes('dopo'))"
             class="p-4 rounded-borders"
