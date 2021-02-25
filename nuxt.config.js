@@ -87,17 +87,17 @@ export default {
 
     ],
     routes: [
-      '/azienda',
-      '/lavori',
-      '/servizi/aiuole',
-      '/servizi/prati',
-      '/servizi/parchi-e-giardini',
-      '/servizi/impianti-irrigazione',
-      '/servizi/potatura-aerea',
-      '/servizi/allestimenti-eventi',
-      '/servizi/trattamenti-fitosanitari',
-      '/servizi/endoterapia',
-      '/servizi/lavori-vari',
+      '/azienda/',
+      '/lavori/',
+      '/servizi/aiuole/',
+      '/servizi/prati/',
+      '/servizi/parchi-e-giardini/',
+      '/servizi/impianti-irrigazione/',
+      '/servizi/potatura-aerea/',
+      '/servizi/allestimenti-eventi/',
+      '/servizi/trattamenti-fitosanitari/',
+      '/servizi/endoterapia/',
+      '/servizi/lavori-vari/',
 
 
     ]
