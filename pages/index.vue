@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     goToService(service) {
-      this.$router.push("/servizi/" + service.uid)
+      this.$router.push("/servizi/" + service.uid + "/")
     }
   },
    async asyncData({ $prismic, error }) {
