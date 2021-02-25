@@ -62,7 +62,7 @@
         is-medium
         v-if="slice.primary.link.url"
         tag="nuxt-link"
-        :to="slice.primary.link.url"
+        :to="slice.primary.link.url + '/'"
         type="is-primary"
       >Vedi Tutti</b-button>
     </div>

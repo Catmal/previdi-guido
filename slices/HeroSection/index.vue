@@ -9,7 +9,7 @@
         <b-button
           v-if="slice.primary.link"
           tag="nuxt-link"
-          :to="slice.primary.link.url"
+          :to="slice.primary.link.url + '/'"
           type="is-primary"
         >{{slice.primary.buttonText}}</b-button>
       </div>
