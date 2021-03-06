@@ -9,17 +9,23 @@
     <div class="container p-4">
       <h1 class="has-text-white">CONTATTI</h1>
       <div class="center has-text-white">
-        <div>
-          <h3>UFFICIO</h3>
-          <h4 class="is-size-2 mt-4">0535 97277</h4>
-        </div>
-        <div>
-          <h3 class="has-text-centered">GUIDO</h3>
-          <h4 class="is-size-2 mt-4">348 0736481</h4>
-        </div>
-        <div>
-          <h3 class="has-text-right">MATTEO</h3>
-          <h4 class="is-size-2 mt-4">388 6351793</h4>
+        <div class="columns">
+          <div class="column is-full-mobile is-one-third-tablet is-clickable">
+            <h3>UFFICIO</h3>
+            <h4 class="is-size-2 mt-4">0535 97277</h4>
+          </div>
+          <div
+            class="column is-full-mobile is-one-third-tablet is-clickable has-text-centered has-text-left-mobile"
+          >
+            <h3>GUIDO</h3>
+            <h4 class="is-size-2 mt-4">348 0736481</h4>
+          </div>
+          <div
+            class="column is-full-mobile is-one-third-tablet is-clickable has-text-right has-text-left-mobile"
+          >
+            <h3>MATTEO</h3>
+            <h4 class="is-size-2 mt-4">388 6351793</h4>
+          </div>
         </div>
       </div>
       <hr />
@@ -94,7 +100,10 @@
           </section>
         </div>
         <div class="column">
-          <section class="has-text-white has-text-right container" style=" height: 100%">
+          <section
+            class="has-text-white has-text-right has-text-left-mobile container"
+            style=" height: 100%"
+          >
             <h2 class="has-text-weight-bold has-text-primary">ORARI APERTURA</h2>
             <h3 class="has-text-primary has-text-weight-medium mt-6 mb-2">ORARIO ESTIVO</h3>
             <h4 class="has-text-white">
