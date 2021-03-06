@@ -1,8 +1,5 @@
 <template>
-  <footer
-    class="footer has-background-primary center"
-    style="padding: 10px;  z-index: 20; opacity: 0.9"
-  >
+  <footer class="footer has-background-primary center p-4" style="z-index: 20; opacity: 0.9">
     <div class="container">
       <div class="columns has-text-white mt-4">
         <div class="column is-one-third has-text-centered-mobile">
@@ -51,10 +48,10 @@
 export default {
   computed: {
     currentMonth() {
-    return new Date().getMonth() + 1
+      return new Date().getMonth() + 1;
     }
   }
-}
+};
 </script>
 <style scoped>
 .center {
