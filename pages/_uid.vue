@@ -8,7 +8,7 @@
   >
     <div class="container p-4">
       <prismic-rich-text :field="document.title" />
-      <div class="card" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
+      <div class="card p-4" style="min-height: 100vh; background: rgba(255,255,255,0.9)">
         <div v-if="document.content.length > 0 && document.content[0].text !== ''">
           <div class="card-content">
             <prismic-rich-text :field="document.content" />
