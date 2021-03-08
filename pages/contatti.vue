@@ -8,20 +8,20 @@
   >
     <div class="container p-4">
       <h1 class="has-text-white">CONTATTI</h1>
-      <div class="center has-text-white">
+      <div class="has-text-white">
         <div class="columns">
-          <div class="column is-full-mobile is-one-third-tablet is-clickable">
+          <div class="column is-full-mobile is-one-third-tablet is-one-third-desktop is-clickable">
             <h3>UFFICIO</h3>
             <h4 class="is-size-2 mt-4">0535 97277</h4>
           </div>
           <div
-            class="column is-full-mobile is-one-third-tablet is-clickable has-text-centered has-text-left-mobile"
+            class="column is-full-mobile is-one-third-tablet is-one-third-desktop is-clickable has-text-centered has-text-left-mobile"
           >
             <h3>GUIDO</h3>
             <h4 class="is-size-2 mt-4">348 0736481</h4>
           </div>
           <div
-            class="column is-full-mobile is-one-third-tablet is-clickable has-text-right has-text-left-mobile"
+            class="column is-full-mobile is-one-third-tablet is-one-third-desktop is-clickable has-text-right has-text-left-mobile"
           >
             <h3>MATTEO</h3>
             <h4 class="is-size-2 mt-4">388 6351793</h4>
