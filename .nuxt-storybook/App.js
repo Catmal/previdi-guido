@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { decode, parsePath, withoutBase, withoutTrailingSlash, normalizeURL } from 'ufo'
 
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
 import NuxtError from './components/nuxt-error.vue'
@@ -9,8 +10,6 @@ import '../node_modules/vue-essential-slices/src/styles/styles.scss'
 import '../assets/css/style.css'
 
 import '../assets/scss/main.scss'
-
-import '../node_modules/@mdi/font/css/materialdesignicons.css'
 
 import _6f6c098b from '../layouts/default.vue'
 

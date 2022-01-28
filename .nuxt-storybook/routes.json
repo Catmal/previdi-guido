@@ -2,71 +2,71 @@
   {
     "name": "prismic-preview",
     "path": "/preview",
-    "component": "/home/mirco/Webapps/vivai-previdi/.nuxt-storybook/prismic/pages/preview.vue",
-    "_name": "_0b608db1"
+    "component": "/home/mirco/Webapps/previdi-guido/.nuxt-storybook/prismic/pages/preview.vue",
+    "_name": "_4c5412ec"
   },
   {
     "name": "contatti",
-    "path": "/contatti",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/contatti.vue",
+    "path": "/contatti/",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/contatti.vue",
     "chunkName": "pages/contatti",
     "pathToRegexpOptions": {
       "strict": true
     },
-    "url": "/contatti",
-    "_name": "_700c38c0"
+    "url": "/contatti/",
+    "_name": "_692ee4c5"
   },
   {
     "name": "piante",
-    "path": "/piante",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/piante.vue",
+    "path": "/piante/",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/piante.vue",
     "chunkName": "pages/piante",
     "pathToRegexpOptions": {
       "strict": true
     },
-    "url": "/piante",
-    "_name": "_05506d5d"
+    "url": "/piante/",
+    "_name": "_49ad73c2"
   },
   {
     "name": "thanks",
-    "path": "/thanks",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/thanks.vue",
+    "path": "/thanks/",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/thanks.vue",
     "chunkName": "pages/thanks",
     "pathToRegexpOptions": {
       "strict": true
     },
-    "url": "/thanks",
-    "_name": "_339b6e4f"
+    "url": "/thanks/",
+    "_name": "_77f874b4"
   },
   {
     "name": "servizi-uid",
-    "path": "/servizi/:uid?",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/servizi/_uid.vue",
+    "path": "/servizi/:uid?/",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/servizi/_uid.vue",
     "chunkName": "pages/servizi/_uid",
     "pathToRegexpOptions": {
       "strict": true
     },
-    "_name": "_39abb2f8"
+    "_name": "_1bffe5ae"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/index.vue",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/index.vue",
     "chunkName": "pages/index",
     "pathToRegexpOptions": {
       "strict": true
     },
     "url": "/",
-    "_name": "_bc1f2988"
+    "_name": "_6a568437"
   },
   {
     "name": "uid",
-    "path": "/:uid",
-    "component": "/home/mirco/Webapps/vivai-previdi/pages/_uid.vue",
+    "path": "/:uid/",
+    "component": "/home/mirco/Webapps/previdi-guido/pages/_uid.vue",
     "chunkName": "pages/_uid",
     "pathToRegexpOptions": {
       "strict": true
     },
-    "_name": "_7954ca97"
+    "_name": "_8ccbb388"
   }
 ]

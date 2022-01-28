@@ -12,12 +12,11 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_2d74e61b from 'nuxt_plugin_plugin_2d74e61b' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_smresolver_25a0c1a2 from 'nuxt_plugin_smresolver_25a0c1a2' // Source: ./prismic/sm-resolver.js (mode: 'all')
-import nuxt_plugin_prismic_355f9fa2 from 'nuxt_plugin_prismic_355f9fa2' // Source: ./prismic/plugins/prismic.js (mode: 'all')
-import nuxt_plugin_prismiccomponents_a3b28248 from 'nuxt_plugin_prismiccomponents_a3b28248' // Source: ./prismic/plugins/prismic-components.js (mode: 'all')
-import nuxt_plugin_prismicpreview_6971ba8c from 'nuxt_plugin_prismicpreview_6971ba8c' // Source: ./prismic/middleware/prismic_preview.js (mode: 'all')
-import nuxt_plugin_buefy_263bbdfc from 'nuxt_plugin_buefy_263bbdfc' // Source: ./buefy.js (mode: 'all')
+import nuxt_plugin_plugin_2f6bc800 from 'nuxt_plugin_plugin_2f6bc800' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_smresolver_f5328372 from 'nuxt_plugin_smresolver_f5328372' // Source: ./prismic/sm-resolver.js (mode: 'all')
+import nuxt_plugin_prismic_7a655b58 from 'nuxt_plugin_prismic_7a655b58' // Source: ./prismic/plugins/prismic.js (mode: 'all')
+import nuxt_plugin_prismiccomponents_252d4397 from 'nuxt_plugin_prismiccomponents_252d4397' // Source: ./prismic/plugins/prismic-components.js (mode: 'all')
+import nuxt_plugin_buefy_c44e1b32 from 'nuxt_plugin_buefy_c44e1b32' // Source: ./buefy.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -46,7 +45,11 @@ Vue.component(Nuxt.name, Nuxt)
 
 Object.defineProperty(Vue.prototype, '$nuxt', {
   get() {
-    return this.$root.$options.$nuxt
+    const globalNuxt = this.$root.$options.$nuxt
+    if (process.client && !globalNuxt && typeof window !== 'undefined') {
+      return window.$nuxt
+    }
+    return globalNuxt
   },
   configurable: true
 })
@@ -56,7 +59,7 @@ Vue.use(Meta, {"keyName":"head","attribute":"data-n-head","ssrAttribute":"data-n
 const defaultTransition = {"name":"page","mode":"out-in","appear":true,"appearClass":"appear","appearActiveClass":"appear-active","appearToClass":"appear-to"}
 
 async function createApp(ssrContext, config = {}) {
-  const router = await createRouter(ssrContext)
+  const router = await createRouter(ssrContext, config)
 
   // Create Root instance
 
@@ -177,28 +180,24 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_2d74e61b === 'function') {
-    await nuxt_plugin_plugin_2d74e61b(app.context, inject)
+  if (typeof nuxt_plugin_plugin_2f6bc800 === 'function') {
+    await nuxt_plugin_plugin_2f6bc800(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_smresolver_25a0c1a2 === 'function') {
-    await nuxt_plugin_smresolver_25a0c1a2(app.context, inject)
+  if (typeof nuxt_plugin_smresolver_f5328372 === 'function') {
+    await nuxt_plugin_smresolver_f5328372(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_prismic_355f9fa2 === 'function') {
-    await nuxt_plugin_prismic_355f9fa2(app.context, inject)
+  if (typeof nuxt_plugin_prismic_7a655b58 === 'function') {
+    await nuxt_plugin_prismic_7a655b58(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_prismiccomponents_a3b28248 === 'function') {
-    await nuxt_plugin_prismiccomponents_a3b28248(app.context, inject)
+  if (typeof nuxt_plugin_prismiccomponents_252d4397 === 'function') {
+    await nuxt_plugin_prismiccomponents_252d4397(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_prismicpreview_6971ba8c === 'function') {
-    await nuxt_plugin_prismicpreview_6971ba8c(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_buefy_263bbdfc === 'function') {
-    await nuxt_plugin_buefy_263bbdfc(app.context, inject)
+  if (typeof nuxt_plugin_buefy_c44e1b32 === 'function') {
+    await nuxt_plugin_buefy_c44e1b32(app.context, inject)
   }
 
   // Lock enablePreview in context
@@ -208,26 +207,33 @@ async function createApp(ssrContext, config = {}) {
     }
   }
 
-  // If server-side, wait for async component to be resolved first
-  if (process.server && ssrContext && ssrContext.url) {
-    await new Promise((resolve, reject) => {
-      router.push(ssrContext.url, resolve, (err) => {
-        // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
-        if (!err._isRouter) return reject(err)
-        if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
+  // Wait for async component to be resolved first
+  await new Promise((resolve, reject) => {
+    // Ignore 404s rather than blindly replacing URL in browser
+    if (process.client) {
+      const { route } = router.resolve(app.context.route.fullPath)
+      if (!route.matched.length) {
+        return resolve()
+      }
+    }
+    router.replace(app.context.route.fullPath, resolve, (err) => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err)
+      if (err.type !== 2 /* NavigationFailureType.redirected */) return resolve()
 
-        // navigated to a different route in router guard
-        const unregister = router.afterEach(async (to, from) => {
+      // navigated to a different route in router guard
+      const unregister = router.afterEach(async (to, from) => {
+        if (process.server && ssrContext && ssrContext.url) {
           ssrContext.url = to.fullPath
-          app.context.route = await getRouteData(to)
-          app.context.params = to.params || {}
-          app.context.query = to.query || {}
-          unregister()
-          resolve()
-        })
+        }
+        app.context.route = await getRouteData(to)
+        app.context.params = to.params || {}
+        app.context.query = to.query || {}
+        unregister()
+        resolve()
       })
     })
-  }
+  })
 
   return {
     app,

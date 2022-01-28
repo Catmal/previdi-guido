@@ -1,20 +1,11 @@
 {
   "Card": {
-    "description": "Auto imported from /components/Card.vue"
-  },
-  "LazyCard": {
-    "description": "Auto imported from /components/Card.vue"
+    "description": "Auto imported from components/Card.vue"
   },
   "Footer": {
-    "description": "Auto imported from /components/Footer.vue"
-  },
-  "LazyFooter": {
-    "description": "Auto imported from /components/Footer.vue"
+    "description": "Auto imported from components/Footer.vue"
   },
   "Logo": {
-    "description": "Auto imported from /components/Logo.vue"
-  },
-  "LazyLogo": {
-    "description": "Auto imported from /components/Logo.vue"
+    "description": "Auto imported from components/Logo.vue"
   }
 }
