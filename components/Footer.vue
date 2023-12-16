@@ -18,12 +18,12 @@
         <div class="column is-one-third has-text-right has-text-centered-mobile">
           <h5 class="has-text-weight-bold">Orario Apertura</h5>
           <div v-if="currentMonth > 9 || currentMonth < 4">
-            <h5>da lunedi a venerdì</h5>
+            <h5>da lunedì a venerdì</h5>
             <h5>8.30 – 12.00 | 14.30 – 18.00</h5>
             <h5>Chiuso sabato e domenica</h5>
           </div>
           <div v-if="currentMonth === 7 || currentMonth === 8">
-            <h5>da lunedi al venerdi</h5>
+            <h5>da lunedì al venerdì</h5>
             <h5>8.30 – 12.00 | 16.30 – 19.00</h5>
             <h5>Chiuso sabato e domenica</h5>
           </div>
@@ -32,7 +32,7 @@
             currentMonth !== 6 &&
             currentMonth !== 7
             ">
-            <h5>da lunedi al sabato</h5>
+            <h5>da lunedì al sabato</h5>
             <h5>8.30 – 12.00 | 14.30 – 19.00</h5>
             <h5>Chiuso la domenica</h5>
           </div>
