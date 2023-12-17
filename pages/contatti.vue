@@ -62,10 +62,14 @@
             <h2 class="has-text-weight-bold has-text-primary">ORARI APERTURA</h2>
             <h3 class="has-text-primary has-text-weight-medium mt-6 mb-2">ORARIO ESTIVO</h3>
             <h4 class="has-text-white">
-              da lunedì al sabato
+              da lunedì al venerdì
               <br />8.30 – 12.00 | 14.30 – 19.00
             </h4>
-            <h4 class="has-text-white">Chiuso la domenica</h4>
+            <h4 class="has-text-white">
+              sabato
+              <br />8.30 – 12.00
+            </h4>
+            <h4 class="has-text-white">Chiuso sabato pomeriggio e domenica</h4>
 
             <h3 class="has-text-primary has-text-weight-medium mt-6 mb-2">LUGLIO E AGOSTO</h3>
             <h4 class="has-text-white">

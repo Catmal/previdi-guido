@@ -31,9 +31,13 @@
             currentMonth !== 6 &&
             currentMonth !== 7
             ">
-            <h5>da lunedì al sabato</h5>
+            <h5>da lunedì a venerdì</h5>
             <h5>8.30 – 12.00 | 14.30 – 19.00</h5>
-            <h5>Chiuso la domenica</h5>
+            <h5 class="has-text-white">
+              sabato
+              <br />8.30 – 12.00
+            </h5>
+            <h5 class="has-text-white">Chiuso sabato pomeriggio e domenica</h5>
           </div>
         </div>
       </div>
