@@ -76,10 +76,14 @@
 
             <h3 class="has-text-primary has-text-weight-medium mt-6 mb-2">ORARIO INVERNALE</h3>
             <h4 class="has-text-white">
-              da lunedì al venerdi
+              da lunedì al venerdì
               <br />8.30 – 12.00 | 14.30 – 18.00
             </h4>
-            <h4 class="has-text-white">Chiuso sabato e domenica</h4>
+            <h4 class="has-text-white">
+              sabato
+              <br />8.30 – 12.00
+            </h4>
+            <h4 class="has-text-white">Chiuso sabato pomeriggio e domenica</h4>
           </section>
         </div>
       </div>

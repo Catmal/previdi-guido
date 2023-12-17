@@ -20,12 +20,13 @@
           <div v-if="currentMonth > 9 || currentMonth < 4">
             <h5>da lunedì a venerdì</h5>
             <h5>8.30 – 12.00 | 14.30 – 18.00</h5>
-            <h5>Chiuso sabato e domenica</h5>
           </div>
           <div v-if="currentMonth === 7 || currentMonth === 8">
-            <h5>da lunedì al venerdì</h5>
-            <h5>8.30 – 12.00 | 16.30 – 19.00</h5>
-            <h5>Chiuso sabato e domenica</h5>
+            <h5 class="has-text-white">
+              sabato
+              <br />8.30 – 12.00
+            </h5>
+            <h5 class="has-text-white">Chiuso sabato pomeriggio e domenica</h5>
           </div>
           <div v-if="currentMonth > 3 &&
             currentMonth < 10 &&
