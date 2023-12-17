@@ -20,8 +20,6 @@
           <div v-if="currentMonth > 9 || currentMonth < 4">
             <h5>da lunedì a venerdì</h5>
             <h5>8.30 – 12.00 | 14.30 – 18.00</h5>
-          </div>
-          <div v-if="currentMonth === 7 || currentMonth === 8">
             <h5 class="has-text-white">
               sabato
               <br />8.30 – 12.00
